@@ -1,0 +1,19 @@
+body {
+    font-family: 'Comic Sans MS';
+    text-align: center;
+}
+.section1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+.section2 {
+    display: inline-block;
+    vertical-align: middle;
+}
+.section3 {
+    display: inline-block;
+    vertical-align: middle;
+}
+ul {
+    text-align: left;
+}
