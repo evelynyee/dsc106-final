@@ -1,11 +1,15 @@
+// TODO: better interaction for plot2? (i.e. buttons, rather than hover)
+// TODO: PLOT3
+
 function load(){
-    let ety= "../data/test_english.csv"; // TODO: change to english.csv when done with development
-    let countries="../data/List_of_official_languages_by_country_and_territory_1.csv"
+    let ety= "../data/test_english.csv"; // TODO: change to english.csv when done with development // fitnered etymoloy data to only engish terms
+    // let countries="../data/List_of_official_languages_by_country_and_territory_1.csv"
     let map="../data/europe.geojson"
-    process(ety, countries, map);
+    let net="../data/lang_links.json" // I created this node-link dataset from the full etymology csv (all languages) using python (pandas)
+    process(ety, map, net);
 }
 
-function process(ety, countries, map) {
+function process(ety, map, net) {
     //preprocess data
     let rowConverter_ety = (d) => {return {
         word: d.term.trim().toLowerCase(),
@@ -16,67 +20,44 @@ function process(ety, countries, map) {
         reltype: d.reltype.replace('_of','').replace('_from','').replace('_to','').replaceAll('_',' '),
         root: d.reltype.includes('root')
     }};
+
     d3.csv(ety, rowConverter_ety).then(function(ety){
-        console.log(ety)
+        console.log(ety);
         render_plot1(ety);
-
         plot3(ety);
-
-        const lang_types = [ 
-            "Minority language",
-            "National language",
-            "Official language",
-            "Regional language",
-            "Widely spoken"]
-        let rowConverter_count = (d) => {
-            let langs = []
-            lang_types.forEach(lang => {
-                if (d[lang].length > 0) { // ignore blank values
-                    splitted = (d[lang].includes('\n') ? d[lang].split('\n') : [d[lang]]) // split on newline characters
-                    splitted.forEach(sub_lang => {
-                        if (! langs.includes(sub_lang)) { // if the language isn't already in our list, add it. 
-                            langs.push(sub_lang.split(' (')[0]) // ignore parenthetical comments
-                        }
-                    })
-                }
-            })
-            return {
-            country: d['Country/Region'],
-            languages: langs
-        }}
-        d3.csv(countries, rowConverter_count).then(function(countries){
-            console.log(countries)
-            d3.json(map).then((map) => plot2(ety, countries, map));
-        });
     });
-}
 
-// plot1 and plot2 share some data processing, so I split it out into its own function
-function get_relcounts(data, reltypes) { 
-    let rolled = d3.rollup(data, g=>g.length/1000, d=>d.related_lang, d=>d.reltype); // number of terms per language and relationship type
-    let relcounts = [];
-    rolled.forEach((innerMap, lang) => {
-        if (lang.length > 0 && lang != 'English') {// ignore blank related_lang and ignore English relationships
-            const inrow = Object.fromEntries(innerMap);
-            outrow = {'lang':lang};
-            if (reltypes) { // if a specific list of relationship types is passed, list all non-specified as 'other'
-                other = 0;
-                other_rels = []
-                Object.keys(inrow).forEach((key) => {
-                    if (reltypes.includes(key)) {outrow[key] = inrow[key];} 
-                    else {
-                        other = other+inrow[key];
-                        other_rels.push(key)
-                    }});
-                Object.assign(outrow, {'other': other});
-                Object.assign(outrow, {'other_rels': other_rels.sort()});}
-            else {
-                Object.assign(outrow, Object.fromEntries(innerMap))
-            }
-            Object.assign(outrow, {'total': d3.sum(Object.values(inrow))});
-            relcounts.push(outrow);}
+    // const lang_types = [ 
+    //     "Minority language",
+    //     "National language",
+    //     "Official language",
+    //     "Regional language",
+    //     "Widely spoken"];
+    // let rowConverter_country = (d) => {
+    //     let langs = [];
+    //     lang_types.forEach(lang => {
+    //         if (d[lang].length > 0) { // ignore blank values
+    //             splitted = (d[lang].includes('\n') ? d[lang].split('\n') : [d[lang]]); // split on newline characters
+    //             splitted.forEach(sub_lang => {
+    //                 if (! langs.includes(sub_lang)) { // if the language isn't already in our list, add it. 
+    //                     langs.push(sub_lang.split(' (')[0]); // ignore parenthetical comments
+    //                 }
+    //             })
+    //         }
+    //     })
+    //     return {
+    //     country: d['Country/Region'],
+    //     languages: langs
+    // }};
+    // d3.csv(countries, rowConverter_country).then(function(countries){
+    //     console.log(countries);
+    //     d3.json(map).then((map) => {
+    //         d3.json(net).then((net) => plot2(net, countries, map));
+    //     });
+    // });
+    d3.json(map).then((map) => {
+        d3.json(net).then((net) => plot2(net, map));
     });
-    return relcounts
 }
 
 function render_plot1(data, bar_count=16) { // default number of bars is 8
@@ -85,6 +66,7 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
     const svgheight = 600;
     const margin = {top:50, bottom: 100, left: 100, right:160};
     const tooltip_width = 150;
+    const page = d3.select('body').style('background-color') // global constant
 
     const font_family = "Comic Sans MS";
     const label_size = 16;
@@ -102,7 +84,25 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
 
     // process data for plot
     const reltypes = ['inherited', 'borrowed', 'derived', 'cognate', 'other']; // focus on these four relationships only for clarity
-    relcounts = get_relcounts(data.filter(d => d.related_lang != 'english'), reltypes);
+    let rolled = d3.rollup(data, g=>g.length/1000, d=>d.related_lang, d=>d.reltype); // number of related terms (in thousands) per language and relationship type
+    let relcounts = [];
+    rolled.forEach((innerMap, lang) => {
+        if (lang.length > 0 && lang != 'english') {// ignore blank related_lang and ignore English relationships
+            const inrow = Object.fromEntries(innerMap);
+            outrow = {'lang':lang};
+            other = 0;
+            other_rels = []
+            Object.keys(inrow).forEach((key) => {
+                if (reltypes.includes(key)) {outrow[key] = inrow[key];} 
+                else {
+                    other = other+inrow[key];
+                    other_rels.push(key)
+                }});
+            Object.assign(outrow, {'other': other});
+            Object.assign(outrow, {'other_rels': other_rels.sort()});
+            Object.assign(outrow, {'total': d3.sum(Object.values(inrow))});
+            relcounts.push(outrow);
+    }});
     console.log(relcounts);
     relcounts = relcounts.sort((a,b)=> b.total-a.total).slice(0,bar_count); // only keep top bar_count languages
     console.log(relcounts);
@@ -136,44 +136,42 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
 
     // make svg canvas, bar_count button, tooltip
     const plot1 = d3.select("#plot1").html(''); // clear previous content
-    svg = plot1.append('svg')
+    const svg = plot1.append('svg')
         .attr("height", svgheight)
         .attr("width", svgwidth)
         .style('display', 'block');
-    const button_select = plot1.select('g.button')
-    button = plot1.append('g')
-            .attr('class', 'button')
-            .style('position', 'relative')
-            .style('display', 'block');
-        button.append('label')
-            .attr('for', 'p1bc')
-            .html('# of Languages:')
-            .style("font-family", font_family)
-            .style("font-size", label_size);
-        button.append('input')
-            .attr('type', 'number')
-            .attr('id', 'plot1_barcount')
-            .attr('name', 'p1bc')
-            .attr('value', bar_count)
-            .attr('placeholder', 'default: 15')
-            .style("font-family", font_family)
-            .style("font-size", label_size);
-        button.append('button')
-            .html('Submit')
-            .style("font-family", font_family)
-            .style("font-size", label_size)
-            .on('click', () => {
-                console.log('new plot 1 bar count:', document.getElementById("plot1_barcount").value);
-                render_plot1(data, document.getElementById("plot1_barcount").value) // when clicked, re-render chart
-            });
-    plot1.select("#tooltip1").remove() // remove old tooltip
+    const button = plot1.append('g')
+        .attr('class', 'button')
+        .style('position', 'relative')
+        .style('display', 'block');
+    button.append('label')
+        .attr('for', 'p1bc')
+        .html('# of Languages:')
+        .style("font-family", font_family)
+        .style("font-size", label_size);
+    button.append('input')
+        .attr('type', 'number')
+        .attr('id', 'plot1_barcount')
+        .attr('name', 'p1bc')
+        .attr('value', bar_count)
+        .attr('placeholder', 'default: 15')
+        .style("font-family", font_family)
+        .style("font-size", label_size);
+    button.append('button')
+        .html('Submit')
+        .style("font-family", font_family)
+        .style("font-size", label_size)
+        .on('click', () => {
+            console.log('new plot 1 bar count:', document.getElementById("plot1_barcount").value);
+            render_plot1(data, document.getElementById("plot1_barcount").value) // when clicked, re-render chart
+        });
     const tooltip = plot1.append('div')
         .attr('id', "tooltip1") // re-draw tooltip on top of everything
         .style("opacity", 0)
         .style("position", "absolute")
         .style('width', tooltip_width)
         .style("padding", legend_border_width)
-        .style("background-color", d3.select('body').style('background-color'))
+        .style("background-color", page)
         .style("border", "1px solid black")
         .style("font-family", font_family)
         .style("font-size", tick_size)
@@ -322,49 +320,60 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
     legend.attr("transform", `translate(${svgwidth-margin.right+legend_r}, ${(margin.top + svgheight - margin.bottom -legend_height)/2})`); // put legend on the right side of the chart, halfway down chart interior
 }
 
-function plot2(ety, countries, map) {
-    console.log(map.features)
-    
+function plot2(net, euromap) {
     // dimensional constants
-    const svgwidth = 700;
+    const svgwidth = 800;
     const svgheight = 600;
-    const margin = {top:50, bottom: 50, left: 50, right:100};
+    const margin = {top:50, bottom: 50, left: 50, right:200};
+    const page = d3.select('body').style('background-color') // global constant
 
     const font_family = "Comic Sans MS";
     const label_size = 10;
     const title_size = 20;
 
-    const min_zoom = 0.5
-    const max_zoom = 3
+    const min_zoom = 0.5;
+    const max_zoom = 3;
     const map_scale = 400;
-    const color_min = "#feffb6";
-    const color_max = "#0078ff";
+    const map_fill = 'lightgray';
+    const border_width = 1;
     const border_color =  "gray";
 
-    const legend_items = 5;
+    const r = 3;
+    const min_width = 3;
+    const node_color = 'black'
+
     const legend_title_size = (title_size+label_size)/2;
-    const legend_rowheight = label_size * 1.5;
+    const legend_label_size = label_size;
+    const legend_rowheight = legend_label_size * 1.5;
+    const legend_r = 3;
     const legend_border_width = 1;
-    const legend_r = 6;
+    const legend_items = 5;
 
     // data processing
-    relcounts = get_relcounts(ety);
-    console.log(relcounts)
-    // TODO: MATCH LANG TO COUNTRIES
+    // euro_countries = countries.filter(d => euro.includes(d.county)) // filter to countries in our map
+    // console.log(euro_countries)
+
 
     // scales, projections
-    const min_count = 0; // TODO
-    const max_count = 0; // TODO
+    values = net.links.map(d => d.value);
+    min_val = d3.min(values)
+    max_val = d3.max(values)
+    // widthScale = d3.scaleLog()
+    //     .domain([min_val, max_val])
+    //     .range([min_width, max_width]);
+
+    const color_min = d3.interpolatePurples(0)
+    const color_max = d3.interpolatePurples(1)
     const colorScale = d3.scaleSequentialLog()
-        .domain([min_count, max_count])
-        .interpolator(d3.interpolateHcl(color_min, color_max));; //TODO
+        .domain([min_val,max_val])
+        .interpolator(d3.interpolateHsl(color_min, color_max)); // d3.interpolateHcl(color_min, color_max));; //TODO
     
-    const projection1 = d3.geoMercator()
+    const projection = d3.geoMercator()
         .center([12,57])
         .scale(map_scale)
         .translate([(margin.left+svgwidth-margin.right)/2, (margin.top+svgheight-margin.bottom)/2]);
     const pathgeo1 = d3.geoPath()
-        .projection(projection1);
+        .projection(projection);
  
     // make svg canvas, tooltip
     svg = d3.select("#plot2").append("svg")
@@ -376,23 +385,27 @@ function plot2(ety, countries, map) {
         .attr("id", "tooltip2")
         .style("font-family", font_family)
         .style("font-size", label_size)
-        .style("opacity", 0)
+        .style('visibility', 'hidden')
         .style("position", "absolute")
-        .style("background-color", "white")
+        .style('text-transform', 'capitalize')
+        .style("background-color", page)
         .style("border", "1px solid black")
-        .style("padding", legend_border_width);
+        .style("padding", border_width);
 
     // draw map
     svg.selectAll("path")
-        .data(map.features)
+        .data(euromap.features)
         .enter()
         .append("path")
-        .attr('class', d => "mappath "+d.properties.NAME)
+        .attr('class', d => "mappath "+d.properties.FIPS)
         .attr("d", pathgeo1)
         .attr('vector-effect',"non-scaling-stroke")
-        .style("fill", 'rebeccapurple') //d => colorScale(rolled[stateSym[d.properties.name]]))
+        .html(function(d) {
+            area = this.getBBox();
+            return [area.x+(area.width/2),area.y+(area.height/2)];})
+        .style("fill", map_fill) //d => colorScale(rolled[stateSym[d.properties.name]]))
         .style('stroke', border_color)
-        .style('stroke-width', legend_border_width)
+        .style('stroke-width', border_width)
         // .on('mouseover', function (e,d) {
         //     state = stateSym[d.properties.name];
         //     tiptext = "State: "+state;
@@ -404,11 +417,71 @@ function plot2(ety, countries, map) {
         //         .style("top", (e.pageY - 10) + "px");
         // })
         // .on('mouseout', (e,d) => tooltip.style("opacity", 0));
+    function get_position(lang) {// get the x,y-coordinates associated with the center of the country associated with the language
+        let country = net.lang_to_country[lang];
+        let area = svg.select('path.'+country);
+        //document.getElementsByClassName(country)[0].getBoundingClientRect();
+        let x = parseFloat(area.html().split(',')[0]);
+        let y = parseFloat(area.html().split(',')[1]);
+        return [x,y]
+    }
+    
+    // add links
+    let link = svg.selectAll("line")
+        .data(net.links)
+        .enter()
+        .append("line")
+        .attr('class', d => 'link '+net.nodes[d.source].name+' '+net.nodes[d.target].name)
+        .attr('x1', d => get_position(net.nodes[d.source].name)[0])
+        .attr('y1', d => get_position(net.nodes[d.source].name)[1])
+        .attr('x2', d => get_position(net.nodes[d.target].name)[0])
+        .attr('y2', d => get_position(net.nodes[d.target].name)[1])
+        .attr("stroke", d => colorScale(d.value))
+        .style("stroke-width", min_width) //d => widthScale(d.value))
+        .style('opacity', 0);
 
-    // map zoom
+    // add nodes
+    let node = svg.selectAll("circle")
+        .data(net.nodes)
+        .enter()
+        .append("circle")
+        .attr('class', 'node')
+        .attr('cx', d=> get_position(d.name)[0])
+        .attr('cy', d=> get_position(d.name)[1])
+        .attr('r', r)
+        .style("fill", node_color)
+        .on('mouseover', function (e,d) {
+            // hide previous links
+            svg.selectAll("line")
+                .style('opacity', 0);
+            // show links to this country
+            svg.selectAll('line.'+d.name)
+                .style('opacity', 1);  
+            // tooltip
+            tiptext = 'Language: '+d.name;
+            fips = net.lang_to_country[d.name];
+            country = euromap.features.filter(d => (d.properties.FIPS == fips))[0];
+            country = country.properties.NAME;
+            tiptext = tiptext+'<br>Country: '+country;
+            tooltip.html(tiptext)
+                .style('visibility', 'visible')
+                .style("left", (e.pageX + 10) + "px")
+                .style("top", (e.pageY - 10) + "px");
+        })
+        .on('mouseout', function () {
+            // hide links
+            svg.selectAll("line")
+                .style('opacity', 0)
+            // hide tooltip
+            tooltip.style('visibility', 'hidden');
+            });
+
+    // zoom
     let zoom = d3.zoom()
         .scaleExtent([min_zoom, max_zoom])
         .on('zoom', function(event) {
+            node.attr('transform', event.transform);
+            link.attr('transform', event.transform);
             d3.selectAll(".mappath").attr('transform', event.transform);
         }); 
     svg.call(zoom);
@@ -421,9 +494,9 @@ function plot2(ety, countries, map) {
         .attr('y', 0)
         .attr('height', margin.top)
         .attr('width', margin.left+svgwidth)
-        .style('fill', d3.select('body').style('background-color'));
+        .style('fill', page);
     title.append("text")
-        .text("English Vocabulary Influence by Country")
+        .text("Etymological Relationships in European Languages")
         .attr("id", "chartTitle")
         .attr("x", (margin.left+svgwidth-margin.right)/2) // center title over chart
         .attr("y", margin.top/2)
@@ -432,12 +505,21 @@ function plot2(ety, countries, map) {
 
     // add legend    
     let legend = svg.append("g")
-        .attr("class", "legend")
-        .attr("transform", `translate(${svgwidth-margin.right+legend_r}, ${svgheight/2})`); // put legend on the right side of the chart, halfway down
+        .attr("class", "legend");
     let legend_height = legend_rowheight/2; // track the total height of the legend, to draw border
     
+    legend_border = legend.append("rect") // put border around legend
+        .attr("id", "legendBorder")
+        .attr("x",0)
+        .attr("y",0)
+        .attr("width", margin.right-legend_border_width-legend_r) // give space for border
+        .attr("height", legend_height)
+        .style("fill", page)
+        .style("stroke", "black")
+        .style("stroke-width", border_width);
+    
     legend.append("text") // legend title
-        .text("Number of English Words")
+        .text("Number of Related Words")
         .attr("x", 0)
         .attr("y", legend_title_size) //between title and label size
         .style("font-size", legend_title_size);
@@ -453,28 +535,22 @@ function plot2(ety, countries, map) {
             .attr("r", legend_r)
             .style("fill", colorScale(value));
         row.append("text")
-            .text('= $'+value.toLocaleString())
+            .text('= '+value.toLocaleString())
             .attr("x", 3*legend_r)
             .attr("y", label_size*0.75)
             .style("font-size", label_size);  
         legend_height = legend_height + legend_rowheight;
     }
     let legend_vals = Array(legend_items);
-    let count_range = max_count - min_count;
+    let val_range = max_val - min_val;
     for (let i in [...legend_vals.keys()]) {
-        legend_vals[i] = Math.round(min_count + count_range*(1/10)**i);
+        legend_vals[i] = Math.round(min_val + val_range*(1/10)**i);
     }
     legend_vals.forEach(add_to_legend);
 
-    legend.append("rect") // legend border
-        .attr("id", "legendBorder")
-        .attr("x",0)
-        .attr("y",0)
-        .attr("width", margin.right-legend_border_width-legend_r) // give space for border
-        .attr("height", legend_height)
-        .style("fill", "transparent")
-        .style("stroke", "black")
-        .style("stroke-width", legend_border_width);
+    // vertically center legend
+    legend_border.attr('height', legend_height);
+    legend.attr("transform", `translate(${svgwidth-margin.right+legend_r}, ${(margin.top + svgheight - margin.bottom -legend_height)/2})`); // put legend on the right side of the chart, halfway down chart interior
 }
 
 function plot3(ety) {
