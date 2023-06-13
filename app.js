@@ -1,4 +1,4 @@
-// TODO: better interaction for plot2? (i.e. buttons, rather than hover)
+// TODO: more interaction for plot2? (e.g. filter links by value (count) or by relationship types)
 // TODO: PLOT3
 
 function load(){
@@ -26,35 +26,6 @@ function process(ety, map, net) {
         render_plot1(ety);
         plot3(ety);
     });
-
-    // const lang_types = [ 
-    //     "Minority language",
-    //     "National language",
-    //     "Official language",
-    //     "Regional language",
-    //     "Widely spoken"];
-    // let rowConverter_country = (d) => {
-    //     let langs = [];
-    //     lang_types.forEach(lang => {
-    //         if (d[lang].length > 0) { // ignore blank values
-    //             splitted = (d[lang].includes('\n') ? d[lang].split('\n') : [d[lang]]); // split on newline characters
-    //             splitted.forEach(sub_lang => {
-    //                 if (! langs.includes(sub_lang)) { // if the language isn't already in our list, add it. 
-    //                     langs.push(sub_lang.split(' (')[0]); // ignore parenthetical comments
-    //                 }
-    //             })
-    //         }
-    //     })
-    //     return {
-    //     country: d['Country/Region'],
-    //     languages: langs
-    // }};
-    // d3.csv(countries, rowConverter_country).then(function(countries){
-    //     console.log(countries);
-    //     d3.json(map).then((map) => {
-    //         d3.json(net).then((net) => plot2(net, countries, map));
-    //     });
-    // });
     d3.json(map).then((map) => {
         d3.json(net).then((net) => plot2(net, map));
     });
@@ -309,7 +280,8 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
 
     // vertically center legend, put border around legend
     legend.append("rect")
-        .attr("id", "legendBorder")
+        .attr('class', 'border')
+        .attr("id", "legendBorder1")
         .attr("x",0)
         .attr("y",0)
         .attr("width", margin.right-legend_border_width-legend_r) // give space for border
@@ -334,7 +306,8 @@ function plot2(net, euromap) {
     const min_zoom = 0.5;
     const max_zoom = 3;
     const map_scale = 400;
-    const map_fill = 'lightgray';
+    const map_fill = '#d2edcc';
+    const map_background = '#dceaff'
     const border_width = 1;
     const border_color =  "gray";
 
@@ -349,18 +322,10 @@ function plot2(net, euromap) {
     const legend_border_width = 1;
     const legend_items = 5;
 
-    // data processing
-    // euro_countries = countries.filter(d => euro.includes(d.county)) // filter to countries in our map
-    // console.log(euro_countries)
-
-
     // scales, projections
     values = net.links.map(d => d.value);
     min_val = d3.min(values)
     max_val = d3.max(values)
-    // widthScale = d3.scaleLog()
-    //     .domain([min_val, max_val])
-    //     .range([min_width, max_width]);
 
     const color_min = d3.interpolatePurples(0)
     const color_max = d3.interpolatePurples(1)
@@ -371,7 +336,7 @@ function plot2(net, euromap) {
     const projection = d3.geoMercator()
         .center([12,57])
         .scale(map_scale)
-        .translate([(margin.left+svgwidth-margin.right)/2, (margin.top+svgheight-margin.bottom)/2]);
+        .translate([(margin.left+svgwidth-margin.right)/2, (margin.top+svgheight-margin.bottom)/2-20]);
     const pathgeo1 = d3.geoPath()
         .projection(projection);
  
@@ -379,7 +344,8 @@ function plot2(net, euromap) {
     svg = d3.select("#plot2").append("svg")
         .attr("height", svgheight)
         .attr("width", svgwidth)
-        .style("font-family", font_family);
+        .style("font-family", font_family)
+        .style('background-color', map_background);
     
     tooltip = d3.select("#plot2").append("div")
         .attr("id", "tooltip2")
@@ -392,7 +358,7 @@ function plot2(net, euromap) {
         .style("border", "1px solid black")
         .style("padding", border_width);
 
-    // draw map
+    // draw map background, map
     svg.selectAll("path")
         .data(euromap.features)
         .enter()
@@ -405,18 +371,8 @@ function plot2(net, euromap) {
             return [area.x+(area.width/2),area.y+(area.height/2)];})
         .style("fill", map_fill) //d => colorScale(rolled[stateSym[d.properties.name]]))
         .style('stroke', border_color)
-        .style('stroke-width', border_width)
-        // .on('mouseover', function (e,d) {
-        //     state = stateSym[d.properties.name];
-        //     tiptext = "State: "+state;
-        //     count = rolled[state];
-        //     tiptext = tiptext + "<br>Total Sales: "+Math.round(count);
-        //     tooltip.html(tiptext)
-        //         .style("opacity", 1)
-        //         .style("left", (e.pageX + 10) + "px")
-        //         .style("top", (e.pageY - 10) + "px");
-        // })
-        // .on('mouseout', (e,d) => tooltip.style("opacity", 0));
+        .style('stroke-width', border_width);
+
     function get_position(lang) {// get the x,y-coordinates associated with the center of the country associated with the language
         let country = net.lang_to_country[lang];
         let area = svg.select('path.'+country);
@@ -437,6 +393,7 @@ function plot2(net, euromap) {
         .attr('x2', d => get_position(net.nodes[d.target].name)[0])
         .attr('y2', d => get_position(net.nodes[d.target].name)[1])
         .attr("stroke", d => colorScale(d.value))
+        .attr('vector-effect',"non-scaling-stroke")
         .style("stroke-width", min_width) //d => widthScale(d.value))
         .style('opacity', 0);
 
@@ -446,18 +403,24 @@ function plot2(net, euromap) {
         .enter()
         .append("circle")
         .attr('class', 'node')
-        .attr('cx', d=> get_position(d.name)[0])
-        .attr('cy', d=> get_position(d.name)[1])
+        .attr('cx', d=> {
+            pos = get_position(d.name)[0];
+            country = net.lang_to_country[d.name]
+            if (country == 'NO'){return pos - 60;} // manual tweaks for a couple of countries to move the node closer to the middle
+            else if (country == 'IT') {return pos - 10;}
+            else if (country == 'DA') {return pos - 15;}
+            else {return pos;}})
+        .attr('cy', d=> {
+            pos = get_position(d.name)[1];
+            country = net.lang_to_country[d.name]
+            if (country == 'NO'){return pos + 60;}
+            else if (country == 'IT') {return pos - 20;}
+            else if (country == 'HR') {return pos - 10;}
+            else {return pos;}})
         .attr('r', r)
         .style("fill", node_color)
-        .on('mouseover', function (e,d) {
-            // hide previous links
-            svg.selectAll("line")
-                .style('opacity', 0);
-            // show links to this country
-            svg.selectAll('line.'+d.name)
-                .style('opacity', 1);  
-            // tooltip
+        .html('false')
+        .on('mouseover', function (e,d) { // hover for tooltip
             tiptext = 'Language: '+d.name;
             fips = net.lang_to_country[d.name];
             country = euromap.features.filter(d => (d.properties.FIPS == fips))[0];
@@ -468,17 +431,27 @@ function plot2(net, euromap) {
                 .style("left", (e.pageX + 10) + "px")
                 .style("top", (e.pageY - 10) + "px");
         })
-        .on('mouseout', function () {
-            // hide links
-            svg.selectAll("line")
-                .style('opacity', 0)
-            // hide tooltip
+        .on('mouseout', function () { // done hovering - hide tooltip
             tooltip.style('visibility', 'hidden');
-            });
+            })
+        .on('click', function (e,d) { // click to toggle links to this country on/off
+            let clicked = this.html;
+            if (clicked == 'true') { // already active - hide links to this country
+                svg.selectAll('line.'+d.name)
+                .style('opacity', 0);
+                this.html = 'false';  // mark as inactive
+            }
+            else { // inactive - show links to this country
+                svg.selectAll('line.'+d.name)
+                    .style('opacity', 1);
+                this.html = 'true'; // mark as active
+            }
+        });
 
     // zoom
     let zoom = d3.zoom()
         .scaleExtent([min_zoom, max_zoom])
+        // .translateExtent([[-475,-400],[450,350]])
         .on('zoom', function(event) {
             node.attr('transform', event.transform);
             link.attr('transform', event.transform);
@@ -486,16 +459,31 @@ function plot2(net, euromap) {
         }); 
     svg.call(zoom);
 
+    // cover up zoom overflow into padding and add border around map-able part of svg
+    const max_margin = d3.max(Object.values(margin));
+    let zoombox = svg.append('g')
+        .attr('class', 'zoombox')
+    zoombox.append('rect')
+        .attr('x',margin.left-max_margin/2) // account for half of stroke to be inside the shape
+        .attr('y', margin.top-max_margin/2)
+        .attr('height', svgheight-margin.top-margin.bottom+max_margin)
+        .attr('width', svgwidth-margin.left-margin.right+max_margin)
+        .style('fill', 'none')
+        .style('stroke', page)
+        .style('stroke-width', max_margin);
+    zoombox.append('rect')
+        .attr('class', 'border')
+        .attr('x',margin.left)
+        .attr('y', margin.top)
+        .attr('height', svgheight-margin.top-margin.bottom)
+        .attr('width', svgwidth-margin.left-margin.right)
+        .style('fill', 'none')
+        .style('stroke', 'black')
+        .style('stroke-width', border_width);
+
+
     // add chart title
-    title = svg.append('g')
-        .attr('class', 'charttitle');
-    title.append('rect')
-        .attr('x', 0)
-        .attr('y', 0)
-        .attr('height', margin.top)
-        .attr('width', margin.left+svgwidth)
-        .style('fill', page);
-    title.append("text")
+    title = svg.append("text")
         .text("Etymological Relationships in European Languages")
         .attr("id", "chartTitle")
         .attr("x", (margin.left+svgwidth-margin.right)/2) // center title over chart
@@ -509,7 +497,8 @@ function plot2(net, euromap) {
     let legend_height = legend_rowheight/2; // track the total height of the legend, to draw border
     
     legend_border = legend.append("rect") // put border around legend
-        .attr("id", "legendBorder")
+        .attr('class', 'border')
+        .attr("id", "legendBorder2")
         .attr("x",0)
         .attr("y",0)
         .attr("width", margin.right-legend_border_width-legend_r) // give space for border
@@ -520,7 +509,7 @@ function plot2(net, euromap) {
     
     legend.append("text") // legend title
         .text("Number of Related Words")
-        .attr("x", 0)
+        .attr("x", border_width)
         .attr("y", legend_title_size) //between title and label size
         .style("font-size", legend_title_size);
     legend_height = legend_height + legend_title_size;
