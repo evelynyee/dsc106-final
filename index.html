@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <script type="text/javascript" src="app.js">
+    <script type="text/javascript" src="script.js">
     </script>
     <link rel="stylesheet" href="styles.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -56,20 +56,31 @@
     </div>
     <h3>section 3 title</h3>
     <div class="section">
-        <div class="section3 text" id="text2">
+        <div class="section3 text" id="text3">
             <p>section 3 text</p>
             <ul>
                 <li>introduce idea of globalism</li>
                 <li>instructions to read/use the plot</li>
                 <li>How this plot adds to the story: 
-                    This will allow users to explore the etymological data for any term they want to investigate. 
-                    This network-style visual will provide more details for a specific term and its connected terms, 
-                    whereas the previous visualizations are more general and language-level. 
-                    In contrast, this visual will allow the user to do self-guided exploration of the data at a term-level.
+                    <br>This will allow users to explore the etymological data for any term they want to investigate. 
+                    <br>This network-style visual will provide more details for a specific term and its connected terms, 
+                    <br>whereas the previous visualizations are more general and language-level. 
+                    <br>In contrast, this visual will allow the user to do self-guided exploration of the data at a term-level.
                 </li>
             </ul>
         </div>
-        <div class="section3 plot" id="plot3">[PLOT 3]</div>
+        <div class="section3 plot" id="plot3">
+            <div id="inputs_div">
+                <div class='plot3inputs'>
+                    <label for="term" class="term_in">Display Word:</label>
+                    <input type="text" class="term_in" id="term_input" name="term" placeholder="word" value="word"/>
+                    <button class="term_in" id="termBtn">Submit</button>
+                </div>
+                <fieldset class='plot3inputs' id="plot3Langs">
+                    <legend>Display Languages:</legend>
+                </fieldset>
+            </div>
+        </div>
     </div>
     <div class="conclusion">
         conclusion text

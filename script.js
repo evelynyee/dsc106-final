@@ -1,5 +1,4 @@
 // TODO: more interaction for plot2? (e.g. filter links by value (count) or by relationship types)
-// TODO: PLOT3
 
 function load(){
     let ety= "../data/test_english.csv"; // TODO: change to english.csv when done with development // fitnered etymoloy data to only engish terms
@@ -22,10 +21,13 @@ function process(ety, map, net) {
     }};
 
     d3.csv(ety, rowConverter_ety).then(function(ety){
-        console.log(ety);
-        render_plot1(ety);
-        plot3(ety);
+        // console.log(ety);
+        render_plot1(ety.filter(d=> d.lang=='english'));
+
+        words = extract_words(ety);
+        render_plot3(words, document.getElementById("term_input").value);
     });
+
     d3.json(map).then((map) => {
         d3.json(net).then((net) => plot2(net, map));
     });
@@ -50,7 +52,7 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
     const legend_label_size = tick_size;
     const legend_rowheight = legend_label_size * 1.5;
     const legend_r = 3;
-    const legend_border_width = 1;
+    const border_width = 1;
     const scale_buffer = 0.1;
 
     // process data for plot
@@ -74,9 +76,9 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
             Object.assign(outrow, {'total': d3.sum(Object.values(inrow))});
             relcounts.push(outrow);
     }});
-    console.log(relcounts);
+    // console.log(relcounts);
     relcounts = relcounts.sort((a,b)=> b.total-a.total).slice(0,bar_count); // only keep top bar_count languages
-    console.log(relcounts);
+    // console.log(relcounts);
 
     // I decided to not dynamically update the legend based on the data.
     // reltypes = new Set(); // for easy tracking of unique values
@@ -141,7 +143,7 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
         .style("opacity", 0)
         .style("position", "absolute")
         .style('width', tooltip_width)
-        .style("padding", legend_border_width)
+        .style("padding", border_width)
         .style("background-color", page)
         .style("border", "1px solid black")
         .style("font-family", font_family)
@@ -197,7 +199,7 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
         .attr("class", "legend");
     legend.append("text")
         .text("Relationship Type")
-        .attr("x", legend_border_width)
+        .attr("x", border_width)
         .attr("y", legend_title_size) //between title and label size
         .style("font-size", legend_title_size);
     
@@ -208,15 +210,15 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
         if (row.empty()) {  // only add new entries
             row = legend.append("g")
                 .attr("class", `${cat}`)
-                .attr("transform", `translate(${legend_border_width + legend_r}, ${legend_height})`);
+                .attr("transform", `translate(${border_width + legend_r}, ${legend_height})`);
             row.append("circle")
-                .attr("cx", legend_border_width + legend_r)
+                .attr("cx", border_width + legend_r)
                 .attr("cy", legend_rowheight/2)
                 .attr("r", legend_r)
                 .style("fill", colorScale(cat));
             row.append("text")
                 .text(cat)
-                .attr("x", legend_border_width + 3*legend_r)
+                .attr("x", border_width + 3*legend_r)
                 .attr("y", legend_rowheight/1.5)
                 .style("font-size", legend_label_size)
                 .style('text-transform', 'capitalize');
@@ -226,7 +228,6 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
 
     // add chart content
     stacked = d3.stack().keys(reltypes)(relcounts);
-    console.log(stacked)
 
     svg.append("g")
         .attr('class', "bars")
@@ -245,7 +246,7 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
                 .attr("width", xScale.bandwidth())
                 .on('mouseover', function (e,d) {
                     // highlighting
-                    d3.select(this).style("stroke", "black").style("stroke-width", legend_border_width);
+                    d3.select(this).style("stroke", "black").style("stroke-width", border_width);
                     // tooltip
                     lang = d.data.lang;
                     tiptext = "Language: "+lang;
@@ -284,11 +285,11 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
         .attr("id", "legendBorder1")
         .attr("x",0)
         .attr("y",0)
-        .attr("width", margin.right-legend_border_width-legend_r) // give space for border
+        .attr("width", margin.right-border_width-legend_r) // give space for border
         .attr("height", legend_height)
         .style("fill", "transparent")
         .style("stroke", "black")
-        .style("stroke-width", legend_border_width);
+        .style("stroke-width", border_width);
     legend.attr("transform", `translate(${svgwidth-margin.right+legend_r}, ${(margin.top + svgheight - margin.bottom -legend_height)/2})`); // put legend on the right side of the chart, halfway down chart interior
 }
 
@@ -297,7 +298,7 @@ function plot2(net, euromap) {
     const svgwidth = 800;
     const svgheight = 600;
     const margin = {top:50, bottom: 50, left: 50, right:200};
-    const page = d3.select('body').style('background-color') // global constant
+    const page = d3.select('body').style('background-color');
 
     const font_family = "Comic Sans MS";
     const label_size = 10;
@@ -312,14 +313,13 @@ function plot2(net, euromap) {
     const border_color =  "gray";
 
     const r = 3;
-    const min_width = 3;
+    const link_width = 3;
     const node_color = 'black'
 
     const legend_title_size = (title_size+label_size)/2;
     const legend_label_size = label_size;
     const legend_rowheight = legend_label_size * 1.5;
     const legend_r = 3;
-    const legend_border_width = 1;
     const legend_items = 5;
 
     // scales, projections
@@ -331,7 +331,7 @@ function plot2(net, euromap) {
     const color_max = d3.interpolatePurples(1)
     const colorScale = d3.scaleSequentialLog()
         .domain([min_val,max_val])
-        .interpolator(d3.interpolateHsl(color_min, color_max)); // d3.interpolateHcl(color_min, color_max));; //TODO
+        .interpolator(d3.interpolateHsl(color_min, color_max));
     
     const projection = d3.geoMercator()
         .center([12,57])
@@ -394,7 +394,7 @@ function plot2(net, euromap) {
         .attr('y2', d => get_position(net.nodes[d.target].name)[1])
         .attr("stroke", d => colorScale(d.value))
         .attr('vector-effect',"non-scaling-stroke")
-        .style("stroke-width", min_width) //d => widthScale(d.value))
+        .style("stroke-width", link_width) //d => widthScale(d.value))
         .style('opacity', 0);
 
     // add nodes
@@ -501,7 +501,7 @@ function plot2(net, euromap) {
         .attr("id", "legendBorder2")
         .attr("x",0)
         .attr("y",0)
-        .attr("width", margin.right-legend_border_width-legend_r) // give space for border
+        .attr("width", margin.right-border_width-legend_r) // give space for border
         .attr("height", legend_height)
         .style("fill", page)
         .style("stroke", "black")
@@ -542,6 +542,270 @@ function plot2(net, euromap) {
     legend.attr("transform", `translate(${svgwidth-margin.right+legend_r}, ${(margin.top + svgheight - margin.bottom -legend_height)/2})`); // put legend on the right side of the chart, halfway down chart interior
 }
 
-function plot3(ety) {
-    // TODO
+function extract_words(data) { // data processing for plot 3
+    rolled = d3.rollup(data, g => g.map(rel=> {
+        return {
+        word:rel.related_word, 
+        lang:rel.related_lang.replaceAll(' ', '_'), 
+        reltype:rel.reltype};})
+        .filter(rel => rel.word.length > 0), d=>d.word);
+
+    words = {};
+    rolled.forEach((inner, word) => {
+        words[word] = Array.from(inner);
+    })
+    return words;
+}
+
+function render_plot3(data, term='word', exclude_langs=[]) {
+    // dimensional constants
+    const svgwidth = 600;
+    const svgheight = 600;
+    const margin = {top:50, bottom: 50, left: 50, right:50};
+    const page = d3.select('body').style('background-color');
+    
+    const font_family = "Comic Sans MS";
+    const label_size = 14;
+    const tick_size = label_size*0.7;
+    const title_size = 20;
+
+    const border_width = 1;
+    const border_color =  "gray";
+    const plot_background = '#f6fbff'
+    const error_color = 'firebrick'
+
+    const link_color = "black";
+    const link_width = 3;
+    const term_color = border_color;
+    const r = 20;
+    const node_stroke_width = r/4;
+    const label_weight = 500
+    const label_color = 'black';
+    const label_outline = plot_background;
+    const label_outline_width = '0.0em'
+
+    // setup language input box
+    const plot3 = d3.select("#plot3");
+    plot3.selectAll('.term_in')
+        .style('font-family', font_family)
+        .style('font-size', label_size)
+    plot3.select('#termBtn')
+        .on('click', () => { // term search button
+        console.log('new plot 3 search term:', document.getElementById("term_input").value);
+        render_plot3(data, document.getElementById("term_input").value); // when clicked, re-render chart
+    }); 
+
+    // data processing - select target term and make node-link data
+    const reltypes = ['inherited', 'borrowed', 'derived', 'cognate', 'other']; // using the same set of relationships from plot1
+    const rels = data[term];
+    const langs = (typeof rels == 'undefined'? [] : Array.from(new Set(rels.map(d=>d.lang))).sort()); // empty array if term not in dataset
+    const words = (typeof rels == 'undefined'? [] : Array.from(new Set(rels.filter(d=>! exclude_langs.includes(d.lang)).map(d=>d.word+' '+d.lang)))); // dont include nodes/links for excluded (un-checked) languages
+
+    const nodes = [{id:0, name:term, lang:'term', reltypes:[]}];
+    const links = [];
+    words.forEach((word_lang, i) => {
+        const word = word_lang.split(' ')[0];
+        const lang = word_lang.split(' ')[1];
+        const word_reltypes = [];
+        let word_rels = rels.filter(rel => (rel.word == word) && (rel.lang == lang));
+        word_rels.forEach((rel) => {
+            if (! word_reltypes.includes(rel.reltype)){ // don't add repeat relationships
+                word_reltypes.push(rel.reltype);
+                links.push({source:0, target:i+1, value:(reltypes.includes(rel.reltype)? rel.reltype : 'other')})
+        }});
+        nodes.push({id:i+1, name:word, lang:lang, reltypes:word_reltypes});
+    });
+
+    // scales
+    const dashes = ['5 3','2 1 4 1','3 1','2',''] // possible values for stroke-dasharray
+    const dashScale = d3.scaleOrdinal().domain(reltypes).range(dashes)
+    const colorScale = (lang) => d3.interpolateSinebow(langs.indexOf(lang)/langs.length);
+
+    // make language checkboxes
+    let lang_buttons = plot3.select('#plot3Langs')
+        .style('font-size', label_size)
+        .style('background-color', plot_background);  
+    lang_buttons.selectAll('div').remove() // remove old language checkboxes
+    lang_buttons.selectAll('div') // language checkboxes
+        .data(langs).enter()
+        .append('div')
+        .style('position', 'relative')
+        .style('left', '0')
+        .attr('class', lang => 'langbox '+lang)
+        .style('margin', label_size/2) // space between check items
+        .append('input')
+        .attr('type', 'checkbox')
+        .attr('id', lang => 'check_'+lang)
+        .attr('name', lang => lang)
+        .property('checked', lang => (exclude_langs.includes(lang)? null : true)) // un-check excluded languages
+        .on('click', function (e,d) {
+            const box = d3.select('#'+'check_'+d);
+            if (box.property('checked')) {
+                // console.log('checkbox: '+d+' checked.');
+                render_plot3(data, term, exclude_langs.filter(lang => lang != d)); // re-draw plot removing lang from exclusions
+            }
+            else {
+                // console.log('checkbox: '+d+' unchecked.');
+                exclude_langs.push(d);
+                render_plot3(data, term, exclude_langs); // re-draw plot, adding lang to exclusions
+            }
+        });
+
+    langs.forEach((lang) => { // language checkbox labels
+        lang_buttons.select('div.'+lang)
+            .append('label')
+            .attr('for', lang)
+            .html(lang.replaceAll('_', ' '))
+            .style('text-transform', 'capitalize')
+            .style('text-decoration', lang => `underline overline solid ${colorScale(lang)} ${border_width*3}px`) // match label colors to node colors
+            // .style('color', colorScale(lang)); 
+    });
+
+    // make svg, tooltip?
+    plot3.select('svg').remove(); // clear previous content
+    const svg = plot3.append('svg')
+        .attr('id', 'plot3svg')
+        .attr("height", svgheight)
+        .attr("width", svgwidth)
+        .style('display', 'inline-block');
+    plot3.select('#tooltip3').remove();
+    const tooltip = plot3.append('div')
+        .attr('id', "tooltip3") // re-draw tooltip on top of everything
+        .style("visibility", 'hidden')
+        .style("position", "absolute")
+        // .style('width', tooltip_width)
+        .style("padding", border_width)
+        .style("background-color", page)
+        .style("border", "1px solid black")
+        .style("font-family", font_family)
+        .style("font-size", tick_size)
+        .style('text-transform', 'capitalize')
+        .style('overflow-wrap', 'normal');
+
+    // add chart title, plot background
+    title = svg.append("text")
+        .text("Etymology Explorer Tool")
+        .attr("id", "chartTitle")
+        .attr("x", (margin.left+svgwidth-margin.right)/2) // center title over chart
+        .attr("y", margin.top/2)
+        .attr("text-anchor", "middle")
+        .style("font-size", title_size);
+    svg.append('rect')
+        .attr('class', 'plot_background')
+        .attr('x', margin.left)
+        .attr('y', margin.top)
+        .attr('stroke', border_color)
+        .attr('width', svgwidth-margin.left-margin.right)
+        .attr('height', svgheight-margin.top-margin.bottom)
+        .style('fill', plot_background);
+
+    // handle error (word not in dataset)
+    if (typeof rels == 'undefined') {
+        svg_box = document.getElementById('plot3svg').getBoundingClientRect();
+        plot3.append('div') // put error message div right on top of the svg
+            .attr('id', 'plot3_error')
+            .html(`The word "${term}" is not in my dataset. Try something else?`)
+            .style('position', 'absolute')
+            .style('left', svg_box.left+window.scrollX+margin.left)
+            .style('top', svg_box.top+window.scrollY + (margin.top+svgheight-margin.bottom)/2 - title_size*1.5) // center error message on top of the svg plot
+            .style('width', svgwidth-margin.left-margin.right)
+            .style('font-size', title_size)
+            .style('color', error_color)
+            .style('text-anchor', 'middle')
+            .style('text-align', 'center');
+        return;
+    }
+    else {
+        plot3.select("#plot3_error").remove();
+    }
+    
+    // add links
+    let link = svg.selectAll("line")
+        .data(links)
+        .enter()
+        .append("line")
+        .attr("stroke", link_color)
+        .style("stroke-width", link_width)
+        .style('stroke-dasharray', d => dashScale(d.value));
+
+    // tooltip functionality - bring out for repeated use for node and label
+    function tooltip_on(e,d) { // hover for tooltip
+        let tiptext = 'Word: '+d.name;
+        tiptext = tiptext+'<br>Language: '+(d.lang == 'term'? 'english' : d.lang.replace('_', ' ')); // target term is always going to be english
+        if (d.reltypes.length > 1) { // multiple relationships with same word
+            tiptext = tiptext+`<br>${term}'s Relationships to ${d.name}:`;
+            tooltip.append('p')
+                .html(tiptext);
+            tooltip.append('ul').selectAll('li')
+                .data(d.reltypes)
+                .enter().append('li')
+                .html(rel => rel);
+        }
+        else if (d.reltypes.length > 0) { // one relationshi[]
+            tiptext = tiptext+`<br>${term}'s Relationship to ${d.name}: ${d.reltypes[0]}`;
+            tooltip.html(tiptext);
+        }
+        else { // no relationships (target term itself)
+            tooltip.html(tiptext)
+        }
+        tooltip.style('visibility', 'visible')
+            .style("left", (e.pageX + 10) + "px")
+            .style("top", (e.pageY - 10) + "px");
+    }
+    function tooltip_off () { // done hovering - clear and hide tooltip
+        tooltip.html('').style('visibility', 'hidden');
+        }
+
+    // add nodes
+    let node = svg.selectAll("circle")
+        .data(nodes)
+        .enter()
+        .append("circle")
+        .attr('class', d => d.lang)
+        .attr('r', r)
+        .style('stroke',d => (d.lang == 'term'? term_color : colorScale(d.lang))) // target term gets its own color
+        .style('stroke-width', node_stroke_width)
+        .style("fill", plot_background)
+        .on('mouseover', tooltip_on)
+        .on('mouseout', tooltip_off);
+    node.select('.term') // set the target node to the center of the plot space
+        .attr('fx', (margin.left+svgwidth-margin.right)/2)
+        .attr('fy', (margin.top+svgwidth-margin.bottom)/2);
+    
+    // add node labels
+    let label = svg.selectAll(".nodelabel")
+        .data(nodes)
+        .enter()
+        .append("text")
+        .text(d => d.name)
+        .attr('class', d => 'nodelabel '+d.name+' '+d.lang)
+        .style("font-size", label_size)
+        .style('font-weight', label_weight)
+        .style('color', label_color)
+        .style('text-anchor', 'middle')
+        .style('stroke', label_outline)
+        .style('stroke-width', label_outline_width)
+        .on('mouseover', tooltip_on)
+        .on('mouseout', tooltip_off);
+
+    // add force simulation
+    const force = d3.forceSimulation(nodes)
+        .force("charge", d3.forceManyBody().strength(-1200))
+        .force("link", d3.forceLink().links(links).id(d => d.id))
+		.force('collision', d3.forceCollide().radius(r))
+        .force('center', d3.forceCenter((margin.left+svgwidth-margin.right)/2, 
+            (margin.top+svgwidth-margin.bottom)/2));
+
+    force.on("tick", function() {
+		link.attr("x1", function(d) { 
+            // console.log(d);
+            return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+        node.attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; })
+        label.attr("x", d => d.x)
+            .attr("y", d=> d.y+label_size/2)
+    });
 }
