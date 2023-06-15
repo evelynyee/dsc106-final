@@ -22,7 +22,6 @@ footer {
 .intro, .conclusion {
   width:80%;
   margin-left: 10%;
-  margin-top: 5%;
   margin-bottom: 5%;
 }
 .section {
@@ -38,6 +37,6 @@ footer {
     float:inline-start;
 }
 #inputs_div { /* pad the inputs down to be close to the middle of the svg plot*/
-    overflow:visible;
+    /* overflow:visible; */
     margin-top: 50;
 }
