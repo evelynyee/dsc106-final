@@ -29,3 +29,7 @@ fieldset {
 #plot3 {
     display: flex;
 }
+#inputs_div { /* pad the inputs down to be close to the middle of the svg plot*/
+    margin-top: 50;
+    margin-left: 50;
+}

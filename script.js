@@ -1,7 +1,8 @@
+// TODO: plot 3 legend: link style to relationship type
 // TODO: more interaction for plot2? (e.g. filter links by value (count) or by relationship types)
 
 function load(){
-    let ety= "../data/test_english.csv"; // TODO: change to english.csv when done with development // fitnered etymoloy data to only engish terms
+    let ety= "../data/test_english.csv"; // filtered etymoloy data to only engish terms
     // let countries="../data/List_of_official_languages_by_country_and_territory_1.csv"
     let map="../data/europe.geojson"
     let net="../data/lang_links.json" // I created this node-link dataset from the full etymology csv (all languages) using python (pandas)
@@ -199,9 +200,10 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
         .attr("class", "legend");
     legend.append("text")
         .text("Relationship Type")
-        .attr("x", border_width)
+        .attr("x", (margin.right-border_width-legend_r)/2)
         .attr("y", legend_title_size) //between title and label size
-        .style("font-size", legend_title_size);
+        .style("font-size", legend_title_size)
+        .style('text-anchor', 'middle');
     
     legend_height = legend_height + legend_title_size;
     let add_to_legend = (cat) => {
@@ -319,7 +321,7 @@ function plot2(net, euromap) {
     const legend_title_size = (title_size+label_size)/2;
     const legend_label_size = label_size;
     const legend_rowheight = legend_label_size * 1.5;
-    const legend_r = 3;
+    const legend_r = 4;
     const legend_items = 5;
 
     // scales, projections
@@ -336,7 +338,7 @@ function plot2(net, euromap) {
     const projection = d3.geoMercator()
         .center([12,57])
         .scale(map_scale)
-        .translate([(margin.left+svgwidth-margin.right)/2, (margin.top+svgheight-margin.bottom)/2-20]);
+        .translate([(margin.left+svgwidth-margin.right)/2, (margin.top+svgheight-margin.bottom)/2-20]); // manually adjusted to put the map centered-ish
     const pathgeo1 = d3.geoPath()
         .projection(projection);
  
@@ -366,7 +368,7 @@ function plot2(net, euromap) {
         .attr('class', d => "mappath "+d.properties.FIPS)
         .attr("d", pathgeo1)
         .attr('vector-effect',"non-scaling-stroke")
-        .html(function(d) {
+        .html(function() {
             area = this.getBBox();
             return [area.x+(area.width/2),area.y+(area.height/2)];})
         .style("fill", map_fill) //d => colorScale(rolled[stateSym[d.properties.name]]))
@@ -509,23 +511,24 @@ function plot2(net, euromap) {
     
     legend.append("text") // legend title
         .text("Number of Related Words")
-        .attr("x", border_width)
+        .attr("x", (margin.right-border_width-legend_r)/2)
         .attr("y", legend_title_size) //between title and label size
-        .style("font-size", legend_title_size);
+        .style("font-size", legend_title_size)
+        .style('text-anchor', 'middle');
     legend_height = legend_height + legend_title_size;
     
     let add_to_legend = (value) => {
         // given a value, add the appropriate row to the legend
         row = legend.append("g")
-            .attr("transform", `translate(${legend_r}, ${legend_height})`);
+            .attr("transform", `translate(${border_width + legend_r}, ${legend_height})`);
         row.append("circle")
-            .attr("cx", legend_r/2)
+            .attr("cx", border_width + legend_r)
             .attr("cy", label_size/2)
             .attr("r", legend_r)
             .style("fill", colorScale(value));
         row.append("text")
             .text('= '+value.toLocaleString())
-            .attr("x", 3*legend_r)
+            .attr("x", border_width + 3*legend_r)
             .attr("y", label_size*0.75)
             .style("font-size", label_size);  
         legend_height = legend_height + legend_rowheight;
@@ -561,12 +564,11 @@ function render_plot3(data, term='word', exclude_langs=[]) {
     // dimensional constants
     const svgwidth = 600;
     const svgheight = 600;
-    const margin = {top:50, bottom: 50, left: 50, right:50};
+    const margin = {top:50, bottom: 50, left: 20, right:150};
     const page = d3.select('body').style('background-color');
     
     const font_family = "Comic Sans MS";
     const label_size = 14;
-    const tick_size = label_size*0.7;
     const title_size = 20;
 
     const border_width = 1;
@@ -579,10 +581,15 @@ function render_plot3(data, term='word', exclude_langs=[]) {
     const term_color = border_color;
     const r = 20;
     const node_stroke_width = r/4;
+
     const label_weight = 500
     const label_color = 'black';
     const label_outline = plot_background;
     const label_outline_width = '0.0em'
+
+    const legend_title_size = (title_size+label_size)/2;
+    const legend_label_size = label_size;
+    const legend_rowheight = legend_label_size * 1.7;
 
     // setup language input box
     const plot3 = d3.select("#plot3");
@@ -617,7 +624,7 @@ function render_plot3(data, term='word', exclude_langs=[]) {
     });
 
     // scales
-    const dashes = ['5 3','2 1 4 1','3 1','2',''] // possible values for stroke-dasharray
+    const dashes = ['7 3','','1','3','2 2 5 7'] // possible values for stroke-dasharray
     const dashScale = d3.scaleOrdinal().domain(reltypes).range(dashes)
     const colorScale = (lang) => d3.interpolateSinebow(langs.indexOf(lang)/langs.length);
 
@@ -678,7 +685,7 @@ function render_plot3(data, term='word', exclude_langs=[]) {
         .style("background-color", page)
         .style("border", "1px solid black")
         .style("font-family", font_family)
-        .style("font-size", tick_size)
+        .style("font-size", legend_label_size)
         .style('text-transform', 'capitalize')
         .style('overflow-wrap', 'normal');
 
@@ -718,7 +725,7 @@ function render_plot3(data, term='word', exclude_langs=[]) {
     else {
         plot3.select("#plot3_error").remove();
     }
-    
+
     // add links
     let link = svg.selectAll("line")
         .data(links)
@@ -737,7 +744,7 @@ function render_plot3(data, term='word', exclude_langs=[]) {
             tooltip.append('p')
                 .html(tiptext);
             tooltip.append('ul').selectAll('li')
-                .data(d.reltypes)
+                .data(d.reltypes.sort())
                 .enter().append('li')
                 .html(rel => rel);
         }
@@ -808,4 +815,64 @@ function render_plot3(data, term='word', exclude_langs=[]) {
         label.attr("x", d => d.x)
             .attr("y", d=> d.y+label_size/2)
     });
+
+    // add legend
+    let legend = svg.append("g")
+        .attr("class", "legend");
+    let legend_box = legend.append("rect")
+        .attr('class', 'border')
+        .attr("id", "legendBorder1")
+        .attr("x", 0)
+        .attr("y",0)
+        .attr("width", margin.right-2*border_width-2*link_width)
+        .style("fill", plot_background)
+        .style("stroke", "black")
+        .style("stroke-width", border_width)
+        .style('text-transform', 'capitalize');
+    legend.append("text") // Legend Title
+        .text("Relationship Type")
+        .attr("x", margin.right/2-border_width-link_width)
+        .attr("y", legend_title_size) // between title and label size
+        .style("font-size", legend_title_size)
+        .style('text-anchor', 'middle');
+    
+    let legend_height = legend_title_size;// track the total height of the legend, to draw border
+    let add_to_legend = (reltype) => {
+        // given a point, add the appropriate row to the legend
+        let row = legend.select(`.${reltype}`);
+        if (row.empty()) {  // only add new entries
+            let text_length = 0;
+            let text_height = 0;
+            row = legend.append("g")
+                .attr("class", `${reltype}`);
+            row.append("text")
+                .text(reltype)
+                .attr("x", 0)
+                .attr("y", legend_rowheight*0.6)
+                .style("font-size", legend_label_size)
+                .style('text-transform', 'capitalize')
+                .style('padding', 0)
+                .each(function () {
+                    text_length = this.getBBox().width;
+                    text_height = this.getBBox().y + this.getBBox().height/2 + 2;
+                }); // get the length, height of the text box
+            row.append('line')
+                .attr('x1', 0)
+                .attr('x2', text_length)
+                .attr('y1', (text_height+legend_rowheight)/2) // between bottom of text and bottom of row
+                .attr('y2', (text_height+legend_rowheight)/2)
+                .attr("stroke", link_color)
+                .style("stroke-width", link_width)
+                .style('stroke-dasharray', dashScale(reltype));
+            row.attr("transform", `translate(${2*link_width}, ${legend_height})`) // center row in margin
+            legend_height = legend_height + legend_rowheight;
+        }
+    }
+    legend_height = legend_height + legend_rowheight/2;
+    reltypes.filter(d=> links.map(l=>l.value).includes(d)).forEach(d => add_to_legend(d));
+    
+    // vertically center legend, put border around legend
+    legend_box.attr("height", legend_height);
+    legend.attr("transform", `translate(${svgwidth-margin.right+2*link_width}, ${(margin.top + svgheight - margin.bottom -legend_height)/2})`); // put legend on the right side of the chart, halfway down chart interior
+
 }
