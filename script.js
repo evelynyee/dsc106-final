@@ -2,7 +2,7 @@
 // TODO: more interaction for plot2? (e.g. filter links by value (count) or by relationship types)
 
 function load(){
-    let ety= "../data/test_english.csv"; // filtered etymoloy data to only engish terms
+    let ety= "../data/english.csv"; // filtered etymoloy data to only engish terms
     // let countries="../data/List_of_official_languages_by_country_and_territory_1.csv"
     let map="../data/europe.geojson"
     let net="../data/lang_links.json" // I created this node-link dataset from the full etymology csv (all languages) using python (pandas)
@@ -57,7 +57,7 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
     const scale_buffer = 0.1;
 
     // process data for plot
-    const reltypes = ['inherited', 'borrowed', 'derived', 'cognate', 'other']; // focus on these four relationships only for clarity
+    const reltypes = ['borrowed', 'inherited', 'derived', 'cognate', 'other']; // focus on these four relationships only for clarity
     let rolled = d3.rollup(data, g=>g.length/1000, d=>d.related_lang, d=>d.reltype); // number of related terms (in thousands) per language and relationship type
     let relcounts = [];
     rolled.forEach((innerMap, lang) => {
@@ -261,7 +261,9 @@ function render_plot1(data, bar_count=16) { // default number of bars is 8
                     if (reltype == "other") {
                         tiptext = tiptext + "<br>Included relationships:";
                         tooltip.append('p')
-                            .html(tiptext);
+                            .html(tiptext)
+                            .style('text-align', 'center')
+                            .style('padding', 0);
                     tooltip.append('ul').selectAll('li')
                         .data(d.data.other_rels)
                         .enter().append('li')
@@ -381,9 +383,11 @@ function plot2(net, euromap) {
         //document.getElementsByClassName(country)[0].getBoundingClientRect();
         let x = parseFloat(area.html().split(',')[0]);
         let y = parseFloat(area.html().split(',')[1]);
-        return [x,y]
+        if (country == 'NO'){return [x - 60, y+60];} // manual tweaks for a couple of countries to move the node closer to the middle
+        else if (country == 'IT') {return [x - 10, y-20];}
+        else if (country == 'DA') {return [x - 15, y-10];}
+        else {return [x,y];}
     }
-    
     // add links
     let link = svg.selectAll("line")
         .data(net.links)
@@ -405,20 +409,8 @@ function plot2(net, euromap) {
         .enter()
         .append("circle")
         .attr('class', 'node')
-        .attr('cx', d=> {
-            pos = get_position(d.name)[0];
-            country = net.lang_to_country[d.name]
-            if (country == 'NO'){return pos - 60;} // manual tweaks for a couple of countries to move the node closer to the middle
-            else if (country == 'IT') {return pos - 10;}
-            else if (country == 'DA') {return pos - 15;}
-            else {return pos;}})
-        .attr('cy', d=> {
-            pos = get_position(d.name)[1];
-            country = net.lang_to_country[d.name]
-            if (country == 'NO'){return pos + 60;}
-            else if (country == 'IT') {return pos - 20;}
-            else if (country == 'HR') {return pos - 10;}
-            else {return pos;}})
+        .attr('cx', d=> get_position(d.name)[0])
+        .attr('cy', d=> get_position(d.name)[1])
         .attr('r', r)
         .style("fill", node_color)
         .html('false')
@@ -564,7 +556,7 @@ function render_plot3(data, term='word', exclude_langs=[]) {
     // dimensional constants
     const svgwidth = 600;
     const svgheight = 600;
-    const margin = {top:50, bottom: 50, left: 20, right:150};
+    const margin = {top:50, bottom: 50, left: 0, right:150};
     const page = d3.select('body').style('background-color');
     
     const font_family = "Comic Sans MS";
@@ -592,11 +584,10 @@ function render_plot3(data, term='word', exclude_langs=[]) {
     const legend_rowheight = legend_label_size * 1.7;
 
     // setup language input box
-    const plot3 = d3.select("#plot3");
-    plot3.selectAll('.term_in')
+    d3.selectAll('.term_in')
         .style('font-family', font_family)
         .style('font-size', label_size)
-    plot3.select('#termBtn')
+    d3.select('#termBtn')
         .on('click', () => { // term search button
         console.log('new plot 3 search term:', document.getElementById("term_input").value);
         render_plot3(data, document.getElementById("term_input").value); // when clicked, re-render chart
@@ -629,7 +620,7 @@ function render_plot3(data, term='word', exclude_langs=[]) {
     const colorScale = (lang) => d3.interpolateSinebow(langs.indexOf(lang)/langs.length);
 
     // make language checkboxes
-    let lang_buttons = plot3.select('#plot3Langs')
+    let lang_buttons = d3.select('#plot3Langs')
         .style('font-size', label_size)
         .style('background-color', plot_background);  
     lang_buttons.selectAll('div').remove() // remove old language checkboxes
@@ -669,6 +660,7 @@ function render_plot3(data, term='word', exclude_langs=[]) {
     });
 
     // make svg, tooltip?
+    const plot3 = d3.select("#plot3");
     plot3.select('svg').remove(); // clear previous content
     const svg = plot3.append('svg')
         .attr('id', 'plot3svg')
@@ -742,7 +734,9 @@ function render_plot3(data, term='word', exclude_langs=[]) {
         if (d.reltypes.length > 1) { // multiple relationships with same word
             tiptext = tiptext+`<br>${term}'s Relationships to ${d.name}:`;
             tooltip.append('p')
-                .html(tiptext);
+                .html(tiptext)
+                .style('text-align', 'center')
+                .style('padding', 0);
             tooltip.append('ul').selectAll('li')
                 .data(d.reltypes.sort())
                 .enter().append('li')
@@ -797,13 +791,16 @@ function render_plot3(data, term='word', exclude_langs=[]) {
 
     // add force simulation
     const force = d3.forceSimulation(nodes)
-        .force("charge", d3.forceManyBody().strength(-1200))
+        .force("charge", d3.forceManyBody().strength(-800))  
         .force("link", d3.forceLink().links(links).id(d => d.id))
 		.force('collision', d3.forceCollide().radius(r))
         .force('center', d3.forceCenter((margin.left+svgwidth-margin.right)/2, 
             (margin.top+svgwidth-margin.bottom)/2));
 
     force.on("tick", function() {
+        node.select('.term')
+            .attr('fx', 0)
+            .attr('fy', 0);
 		link.attr("x1", function(d) { 
             // console.log(d);
             return d.source.x; })
