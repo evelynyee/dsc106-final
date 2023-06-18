@@ -1,0 +1,5648 @@
+{
+    "lang_to_country": {
+        "azerbaijani": "AJ",
+        "albanian": "AL",
+        "armenian": "AM",
+        "bosnian": "BK",
+        "bulgarian": "BU",
+        "danish": "DA",
+        "irish": "EI",
+        "estonian": "EN",
+        "czech": "EZ",
+        "finnish": "FI",
+        "french": "FR",
+        "georgian": "GG",
+        "german": "GM",
+        "greek": "GR",
+        "croatian": "HR",
+        "hungarian": "HU",
+        "icelandic": "IC",
+        "hebrew": "IS",
+        "italian": "IT",
+        "latvian": "LG",
+        "belarusian": "BO",
+        "lithuanian": "LH",
+        "slovak": "LO",
+        "macedonian": "MK",
+        "maltese": "MT",
+        "flemish": "BE",
+        "faroese": "FO",
+        "luxembourgish": "LU",
+        "monegasque": "MN",
+        "montenegrin": "MJ",
+        "dutch": "NL",
+        "norwegian": "NO",
+        "polish": "PL",
+        "portuguese": "PO",
+        "romanian": "RO",
+        "gagauz": "MD",
+        "slovene": "SI",
+        "spanish": "SP",
+        "swedish": "SW",
+        "romansh": "SZ",
+        "turkish": "TU",
+        "english": "UK",
+        "ukranian": "UP",
+        "serbian": "RB",
+        "latin": "VT",
+        "russian": "RS"
+    },
+    "nodes": [
+        {
+            "id": 0,
+            "name": "azerbaijani"
+        },
+        {
+            "id": 1,
+            "name": "albanian"
+        },
+        {
+            "id": 2,
+            "name": "armenian"
+        },
+        {
+            "id": 3,
+            "name": "bosnian"
+        },
+        {
+            "id": 4,
+            "name": "bulgarian"
+        },
+        {
+            "id": 5,
+            "name": "danish"
+        },
+        {
+            "id": 6,
+            "name": "irish"
+        },
+        {
+            "id": 7,
+            "name": "estonian"
+        },
+        {
+            "id": 8,
+            "name": "czech"
+        },
+        {
+            "id": 9,
+            "name": "finnish"
+        },
+        {
+            "id": 10,
+            "name": "french"
+        },
+        {
+            "id": 11,
+            "name": "georgian"
+        },
+        {
+            "id": 12,
+            "name": "german"
+        },
+        {
+            "id": 13,
+            "name": "greek"
+        },
+        {
+            "id": 14,
+            "name": "croatian"
+        },
+        {
+            "id": 15,
+            "name": "hungarian"
+        },
+        {
+            "id": 16,
+            "name": "icelandic"
+        },
+        {
+            "id": 17,
+            "name": "hebrew"
+        },
+        {
+            "id": 18,
+            "name": "italian"
+        },
+        {
+            "id": 19,
+            "name": "latvian"
+        },
+        {
+            "id": 20,
+            "name": "belarusian"
+        },
+        {
+            "id": 21,
+            "name": "lithuanian"
+        },
+        {
+            "id": 22,
+            "name": "slovak"
+        },
+        {
+            "id": 23,
+            "name": "macedonian"
+        },
+        {
+            "id": 24,
+            "name": "maltese"
+        },
+        {
+            "id": 25,
+            "name": "flemish"
+        },
+        {
+            "id": 26,
+            "name": "faroese"
+        },
+        {
+            "id": 27,
+            "name": "luxembourgish"
+        },
+        {
+            "id": 28,
+            "name": "monegasque"
+        },
+        {
+            "id": 29,
+            "name": "montenegrin"
+        },
+        {
+            "id": 30,
+            "name": "dutch"
+        },
+        {
+            "id": 31,
+            "name": "norwegian"
+        },
+        {
+            "id": 32,
+            "name": "polish"
+        },
+        {
+            "id": 33,
+            "name": "portuguese"
+        },
+        {
+            "id": 34,
+            "name": "romanian"
+        },
+        {
+            "id": 35,
+            "name": "gagauz"
+        },
+        {
+            "id": 36,
+            "name": "slovene"
+        },
+        {
+            "id": 37,
+            "name": "spanish"
+        },
+        {
+            "id": 38,
+            "name": "swedish"
+        },
+        {
+            "id": 39,
+            "name": "romansh"
+        },
+        {
+            "id": 40,
+            "name": "turkish"
+        },
+        {
+            "id": 41,
+            "name": "english"
+        },
+        {
+            "id": 42,
+            "name": "ukranian"
+        },
+        {
+            "id": 43,
+            "name": "serbian"
+        },
+        {
+            "id": 44,
+            "name": "latin"
+        },
+        {
+            "id": 45,
+            "name": "russian"
+        }
+    ],
+    "links": [
+        {
+            "source": 1,
+            "target": 2,
+            "cognate_of": 42,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 44
+        },
+        {
+            "source": 1,
+            "target": 0,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 1,
+            "target": 20,
+            "cognate_of": 2,
+            "etymologically_related_to": 1,
+            "value": 3
+        },
+        {
+            "source": 1,
+            "target": 4,
+            "borrowed_from": 17,
+            "cognate_of": 86,
+            "derived_from": 8,
+            "etymologically_related_to": 13,
+            "value": 124
+        },
+        {
+            "source": 1,
+            "target": 8,
+            "cognate_of": 11,
+            "derived_from": 1,
+            "value": 12
+        },
+        {
+            "source": 1,
+            "target": 5,
+            "cognate_of": 9,
+            "etymologically_related_to": 1,
+            "value": 10
+        },
+        {
+            "source": 1,
+            "target": 30,
+            "cognate_of": 25,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 27
+        },
+        {
+            "source": 1,
+            "target": 41,
+            "borrowed_from": 73,
+            "calque_of": 4,
+            "cognate_of": 451,
+            "derived_from": 12,
+            "etymologically_related_to": 99,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 641
+        },
+        {
+            "source": 1,
+            "target": 7,
+            "etymologically_related_to": 1,
+            "derived_from": 1,
+            "value": 2
+        },
+        {
+            "source": 1,
+            "target": 26,
+            "cognate_of": 5,
+            "value": 5
+        },
+        {
+            "source": 1,
+            "target": 9,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 1,
+            "target": 10,
+            "borrowed_from": 31,
+            "cognate_of": 19,
+            "derived_from": 12,
+            "etymologically_related_to": 4,
+            "value": 66
+        },
+        {
+            "source": 1,
+            "target": 12,
+            "borrowed_from": 11,
+            "calque_of": 1,
+            "cognate_of": 99,
+            "derived_from": 2,
+            "etymologically_related_to": 19,
+            "has_confix": 3,
+            "value": 135
+        },
+        {
+            "source": 1,
+            "target": 13,
+            "borrowed_from": 57,
+            "cognate_of": 138,
+            "derived_from": 24,
+            "etymologically_related_to": 44,
+            "value": 263
+        },
+        {
+            "source": 1,
+            "target": 17,
+            "derived_from": 12,
+            "etymologically_related_to": 2,
+            "value": 14
+        },
+        {
+            "source": 1,
+            "target": 15,
+            "cognate_of": 7,
+            "derived_from": 1,
+            "etymologically_related_to": 2,
+            "value": 10
+        },
+        {
+            "source": 1,
+            "target": 16,
+            "cognate_of": 22,
+            "etymologically_related_to": 2,
+            "value": 24
+        },
+        {
+            "source": 1,
+            "target": 6,
+            "cognate_of": 25,
+            "value": 25
+        },
+        {
+            "source": 1,
+            "target": 18,
+            "borrowed_from": 61,
+            "calque_of": 4,
+            "cognate_of": 87,
+            "derived_from": 13,
+            "etymologically_related_to": 36,
+            "value": 201
+        },
+        {
+            "source": 1,
+            "target": 44,
+            "borrowed_from": 427,
+            "calque_of": 13,
+            "cognate_of": 545,
+            "derived_from": 228,
+            "etymologically_related_to": 238,
+            "has_affix": 2,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "inherited_from": 1,
+            "learned_borrowing_from": 50,
+            "value": 1506
+        },
+        {
+            "source": 1,
+            "target": 19,
+            "cognate_of": 132,
+            "etymologically_related_to": 12,
+            "value": 144
+        },
+        {
+            "source": 1,
+            "target": 21,
+            "cognate_of": 432,
+            "etymologically_related_to": 80,
+            "value": 512
+        },
+        {
+            "source": 1,
+            "target": 23,
+            "borrowed_from": 14,
+            "cognate_of": 44,
+            "derived_from": 4,
+            "etymologically_related_to": 12,
+            "value": 74
+        },
+        {
+            "source": 1,
+            "target": 31,
+            "cognate_of": 12,
+            "etymologically_related_to": 4,
+            "value": 16
+        },
+        {
+            "source": 1,
+            "target": 32,
+            "cognate_of": 26,
+            "etymologically_related_to": 2,
+            "borrowed_from": 2,
+            "derived_from": 2,
+            "value": 32
+        },
+        {
+            "source": 1,
+            "target": 33,
+            "cognate_of": 4,
+            "derived_from": 1,
+            "borrowed_from": 2,
+            "etymologically_related_to": 1,
+            "value": 8
+        },
+        {
+            "source": 1,
+            "target": 34,
+            "borrowed_from": 35,
+            "cognate_of": 339,
+            "etymologically_related_to": 156,
+            "derived_from": 19,
+            "value": 549
+        },
+        {
+            "source": 1,
+            "target": 45,
+            "borrowed_from": 1,
+            "cognate_of": 44,
+            "etymologically_related_to": 2,
+            "value": 47
+        },
+        {
+            "source": 1,
+            "target": 22,
+            "cognate_of": 1,
+            "derived_from": 2,
+            "value": 3
+        },
+        {
+            "source": 1,
+            "target": 36,
+            "cognate_of": 11,
+            "etymologically_related_to": 1,
+            "borrowed_from": 1,
+            "value": 13
+        },
+        {
+            "source": 1,
+            "target": 37,
+            "borrowed_from": 3,
+            "cognate_of": 12,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 17
+        },
+        {
+            "source": 1,
+            "target": 38,
+            "cognate_of": 19,
+            "etymologically_related_to": 2,
+            "value": 21
+        },
+        {
+            "source": 1,
+            "target": 40,
+            "borrowed_from": 28,
+            "calque_of": 1,
+            "cognate_of": 39,
+            "derived_from": 10,
+            "etymologically_related_to": 10,
+            "value": 88
+        },
+        {
+            "source": 2,
+            "target": 0,
+            "borrowed_from": 70,
+            "cognate_of": 28,
+            "derived_from": 12,
+            "etymologically_related_to": 19,
+            "value": 129
+        },
+        {
+            "source": 2,
+            "target": 4,
+            "borrowed_from": 1,
+            "cognate_of": 3,
+            "derived_from": 1,
+            "etymologically_related_to": 2,
+            "value": 7
+        },
+        {
+            "source": 2,
+            "target": 30,
+            "borrowed_from": 1,
+            "compound_of": 2,
+            "derived_from": 1,
+            "cognate_of": 1,
+            "value": 5
+        },
+        {
+            "source": 2,
+            "target": 41,
+            "borrowed_from": 214,
+            "calque_of": 13,
+            "cognate_of": 54,
+            "derived_from": 173,
+            "etymologically_related_to": 38,
+            "learned_borrowing_from": 1,
+            "value": 493
+        },
+        {
+            "source": 2,
+            "target": 10,
+            "borrowed_from": 44,
+            "calque_of": 15,
+            "cognate_of": 7,
+            "derived_from": 36,
+            "etymologically_related_to": 6,
+            "value": 108
+        },
+        {
+            "source": 2,
+            "target": 11,
+            "borrowed_from": 99,
+            "cognate_of": 57,
+            "derived_from": 31,
+            "etymologically_related_to": 35,
+            "value": 222
+        },
+        {
+            "source": 2,
+            "target": 12,
+            "borrowed_from": 8,
+            "calque_of": 4,
+            "cognate_of": 13,
+            "derived_from": 13,
+            "etymologically_related_to": 3,
+            "value": 41
+        },
+        {
+            "source": 2,
+            "target": 13,
+            "borrowed_from": 1,
+            "cognate_of": 3,
+            "derived_from": 3,
+            "etymologically_related_to": 2,
+            "value": 9
+        },
+        {
+            "source": 2,
+            "target": 17,
+            "cognate_of": 3,
+            "etymologically_related_to": 1,
+            "borrowed_from": 2,
+            "value": 6
+        },
+        {
+            "source": 2,
+            "target": 15,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 2,
+            "target": 16,
+            "derived_from": 1,
+            "cognate_of": 1,
+            "value": 2
+        },
+        {
+            "source": 2,
+            "target": 18,
+            "borrowed_from": 4,
+            "calque_of": 1,
+            "cognate_of": 10,
+            "derived_from": 7,
+            "etymologically_related_to": 4,
+            "value": 26
+        },
+        {
+            "source": 2,
+            "target": 44,
+            "borrowed_from": 6,
+            "calque_of": 4,
+            "cognate_of": 18,
+            "derived_from": 93,
+            "etymologically_related_to": 7,
+            "semantic_loan_of": 3,
+            "value": 131
+        },
+        {
+            "source": 2,
+            "target": 21,
+            "etymologically_related_to": 3,
+            "cognate_of": 6,
+            "value": 9
+        },
+        {
+            "source": 2,
+            "target": 31,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 2,
+            "target": 32,
+            "derived_from": 1,
+            "borrowed_from": 1,
+            "cognate_of": 1,
+            "etymologically_related_to": 2,
+            "value": 5
+        },
+        {
+            "source": 2,
+            "target": 33,
+            "cognate_of": 1,
+            "derived_from": 2,
+            "borrowed_from": 2,
+            "value": 5
+        },
+        {
+            "source": 2,
+            "target": 34,
+            "cognate_of": 2,
+            "etymologically_related_to": 2,
+            "borrowed_from": 17,
+            "derived_from": 3,
+            "value": 24
+        },
+        {
+            "source": 2,
+            "target": 45,
+            "borrowed_from": 884,
+            "calque_of": 102,
+            "cognate_of": 34,
+            "derived_from": 94,
+            "etymologically_related_to": 52,
+            "semantic_loan_of": 18,
+            "value": 1184
+        },
+        {
+            "source": 2,
+            "target": 37,
+            "borrowed_from": 3,
+            "calque_of": 1,
+            "cognate_of": 2,
+            "derived_from": 5,
+            "value": 11
+        },
+        {
+            "source": 2,
+            "target": 40,
+            "borrowed_from": 66,
+            "calque_of": 1,
+            "cognate_of": 61,
+            "derived_from": 29,
+            "etymologically_related_to": 58,
+            "semantic_loan_of": 1,
+            "value": 216
+        },
+        {
+            "source": 0,
+            "target": 4,
+            "borrowed_from": 1,
+            "cognate_of": 3,
+            "value": 4
+        },
+        {
+            "source": 0,
+            "target": 30,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "value": 3
+        },
+        {
+            "source": 0,
+            "target": 41,
+            "borrowed_from": 22,
+            "calque_of": 4,
+            "cognate_of": 12,
+            "derived_from": 32,
+            "etymologically_related_to": 13,
+            "semantic_loan_of": 1,
+            "value": 84
+        },
+        {
+            "source": 0,
+            "target": 9,
+            "etymologically_related_to": 1,
+            "cognate_of": 1,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 0,
+            "target": 10,
+            "borrowed_from": 6,
+            "derived_from": 86,
+            "etymologically_related_to": 5,
+            "cognate_of": 1,
+            "value": 98
+        },
+        {
+            "source": 0,
+            "target": 35,
+            "cognate_of": 15,
+            "value": 15
+        },
+        {
+            "source": 0,
+            "target": 11,
+            "borrowed_from": 6,
+            "cognate_of": 4,
+            "derived_from": 1,
+            "etymologically_related_to": 3,
+            "value": 14
+        },
+        {
+            "source": 0,
+            "target": 12,
+            "borrowed_from": 2,
+            "derived_from": 11,
+            "etymologically_related_to": 4,
+            "value": 17
+        },
+        {
+            "source": 0,
+            "target": 13,
+            "borrowed_from": 3,
+            "derived_from": 6,
+            "etymologically_related_to": 1,
+            "value": 10
+        },
+        {
+            "source": 0,
+            "target": 17,
+            "cognate_of": 1,
+            "derived_from": 3,
+            "borrowed_from": 1,
+            "value": 5
+        },
+        {
+            "source": 0,
+            "target": 15,
+            "cognate_of": 12,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 14
+        },
+        {
+            "source": 0,
+            "target": 18,
+            "cognate_of": 1,
+            "derived_from": 13,
+            "etymologically_related_to": 1,
+            "value": 15
+        },
+        {
+            "source": 0,
+            "target": 44,
+            "borrowed_from": 2,
+            "calque_of": 1,
+            "derived_from": 42,
+            "etymologically_related_to": 2,
+            "learned_borrowing_from": 1,
+            "value": 48
+        },
+        {
+            "source": 0,
+            "target": 31,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 32,
+            "derived_from": 6,
+            "cognate_of": 2,
+            "value": 8
+        },
+        {
+            "source": 0,
+            "target": 33,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "value": 3
+        },
+        {
+            "source": 0,
+            "target": 34,
+            "derived_from": 2,
+            "cognate_of": 2,
+            "value": 4
+        },
+        {
+            "source": 0,
+            "target": 45,
+            "borrowed_from": 193,
+            "calque_of": 77,
+            "cognate_of": 21,
+            "derived_from": 38,
+            "etymologically_related_to": 22,
+            "semantic_loan_of": 21,
+            "value": 372
+        },
+        {
+            "source": 0,
+            "target": 37,
+            "derived_from": 3,
+            "value": 3
+        },
+        {
+            "source": 0,
+            "target": 38,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 0,
+            "target": 40,
+            "borrowed_from": 25,
+            "cognate_of": 1060,
+            "derived_from": 2,
+            "etymologically_related_to": 55,
+            "semantic_loan_of": 2,
+            "value": 1144
+        },
+        {
+            "source": 20,
+            "target": 0,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 20,
+            "target": 4,
+            "cognate_of": 15,
+            "value": 15
+        },
+        {
+            "source": 20,
+            "target": 8,
+            "borrowed_from": 4,
+            "cognate_of": 41,
+            "etymologically_related_to": 1,
+            "value": 46
+        },
+        {
+            "source": 20,
+            "target": 30,
+            "borrowed_from": 3,
+            "derived_from": 2,
+            "value": 5
+        },
+        {
+            "source": 20,
+            "target": 41,
+            "borrowed_from": 37,
+            "cognate_of": 16,
+            "etymologically_related_to": 10,
+            "derived_from": 40,
+            "value": 103
+        },
+        {
+            "source": 20,
+            "target": 26,
+            "cognate_of": 2,
+            "calque_of": 1,
+            "etymologically_related_to": 1,
+            "value": 4
+        },
+        {
+            "source": 20,
+            "target": 10,
+            "borrowed_from": 18,
+            "calque_of": 1,
+            "derived_from": 4,
+            "etymologically_related_to": 1,
+            "value": 24
+        },
+        {
+            "source": 20,
+            "target": 11,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 20,
+            "target": 12,
+            "borrowed_from": 16,
+            "calque_of": 1,
+            "cognate_of": 8,
+            "derived_from": 10,
+            "etymologically_related_to": 7,
+            "value": 42
+        },
+        {
+            "source": 20,
+            "target": 13,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 20,
+            "target": 17,
+            "derived_from": 2,
+            "borrowed_from": 1,
+            "value": 3
+        },
+        {
+            "source": 20,
+            "target": 18,
+            "borrowed_from": 3,
+            "derived_from": 2,
+            "value": 5
+        },
+        {
+            "source": 20,
+            "target": 44,
+            "borrowed_from": 6,
+            "cognate_of": 3,
+            "derived_from": 21,
+            "etymologically_related_to": 3,
+            "value": 33
+        },
+        {
+            "source": 20,
+            "target": 21,
+            "cognate_of": 11,
+            "etymologically_related_to": 5,
+            "borrowed_from": 10,
+            "derived_from": 2,
+            "value": 28
+        },
+        {
+            "source": 20,
+            "target": 23,
+            "cognate_of": 3,
+            "value": 3
+        },
+        {
+            "source": 20,
+            "target": 32,
+            "borrowed_from": 234,
+            "calque_of": 1,
+            "cognate_of": 284,
+            "derived_from": 5,
+            "etymologically_related_to": 21,
+            "value": 545
+        },
+        {
+            "source": 20,
+            "target": 34,
+            "cognate_of": 5,
+            "etymologically_related_to": 1,
+            "value": 6
+        },
+        {
+            "source": 20,
+            "target": 45,
+            "borrowed_from": 23,
+            "calque_of": 4,
+            "cognate_of": 888,
+            "etymologically_related_to": 52,
+            "derived_from": 1,
+            "value": 968
+        },
+        {
+            "source": 20,
+            "target": 22,
+            "cognate_of": 15,
+            "etymologically_related_to": 1,
+            "value": 16
+        },
+        {
+            "source": 20,
+            "target": 36,
+            "cognate_of": 15,
+            "etymologically_related_to": 2,
+            "value": 17
+        },
+        {
+            "source": 20,
+            "target": 40,
+            "cognate_of": 3,
+            "etymologically_related_to": 2,
+            "value": 5
+        },
+        {
+            "source": 4,
+            "target": 8,
+            "borrowed_from": 4,
+            "cognate_of": 48,
+            "etymologically_related_to": 6,
+            "value": 58
+        },
+        {
+            "source": 4,
+            "target": 5,
+            "cognate_of": 1,
+            "etymologically_related_to": 1,
+            "borrowed_from": 1,
+            "value": 3
+        },
+        {
+            "source": 4,
+            "target": 30,
+            "borrowed_from": 2,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 4,
+            "target": 41,
+            "borrowed_from": 98,
+            "calque_of": 1,
+            "cognate_of": 43,
+            "derived_from": 32,
+            "etymologically_related_to": 21,
+            "value": 195
+        },
+        {
+            "source": 4,
+            "target": 7,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 4,
+            "target": 26,
+            "borrowed_from": 1,
+            "value": 1
+        },
+        {
+            "source": 4,
+            "target": 10,
+            "borrowed_from": 162,
+            "calque_of": 7,
+            "cognate_of": 11,
+            "derived_from": 24,
+            "etymologically_related_to": 9,
+            "value": 213
+        },
+        {
+            "source": 4,
+            "target": 35,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 4,
+            "target": 12,
+            "borrowed_from": 95,
+            "calque_of": 3,
+            "cognate_of": 36,
+            "derived_from": 14,
+            "etymologically_related_to": 8,
+            "value": 156
+        },
+        {
+            "source": 4,
+            "target": 13,
+            "borrowed_from": 39,
+            "cognate_of": 25,
+            "derived_from": 8,
+            "etymologically_related_to": 7,
+            "value": 79
+        },
+        {
+            "source": 4,
+            "target": 17,
+            "borrowed_from": 1,
+            "derived_from": 1,
+            "value": 2
+        },
+        {
+            "source": 4,
+            "target": 15,
+            "borrowed_from": 9,
+            "cognate_of": 33,
+            "derived_from": 3,
+            "etymologically_related_to": 8,
+            "value": 53
+        },
+        {
+            "source": 4,
+            "target": 18,
+            "borrowed_from": 24,
+            "cognate_of": 4,
+            "compound_of": 2,
+            "derived_from": 8,
+            "etymologically_related_to": 2,
+            "value": 40
+        },
+        {
+            "source": 4,
+            "target": 44,
+            "borrowed_from": 91,
+            "calque_of": 12,
+            "cognate_of": 50,
+            "derived_from": 89,
+            "etymologically_related_to": 24,
+            "inherited_from": 1,
+            "value": 267
+        },
+        {
+            "source": 4,
+            "target": 19,
+            "cognate_of": 128,
+            "etymologically_related_to": 9,
+            "value": 137
+        },
+        {
+            "source": 4,
+            "target": 21,
+            "cognate_of": 47,
+            "etymologically_related_to": 7,
+            "value": 54
+        },
+        {
+            "source": 4,
+            "target": 23,
+            "cognate_of": 179,
+            "etymologically_related_to": 6,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "borrowed_from": 2,
+            "value": 189
+        },
+        {
+            "source": 4,
+            "target": 32,
+            "borrowed_from": 7,
+            "cognate_of": 54,
+            "derived_from": 3,
+            "etymologically_related_to": 7,
+            "value": 71
+        },
+        {
+            "source": 4,
+            "target": 33,
+            "borrowed_from": 25,
+            "cognate_of": 1,
+            "derived_from": 22,
+            "etymologically_related_to": 1,
+            "value": 49
+        },
+        {
+            "source": 4,
+            "target": 34,
+            "borrowed_from": 372,
+            "cognate_of": 165,
+            "derived_from": 91,
+            "etymologically_related_to": 78,
+            "calque_of": 1,
+            "has_affix": 22,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 731
+        },
+        {
+            "source": 4,
+            "target": 45,
+            "borrowed_from": 208,
+            "calque_of": 1,
+            "cognate_of": 372,
+            "derived_from": 6,
+            "etymologically_related_to": 77,
+            "value": 664
+        },
+        {
+            "source": 4,
+            "target": 22,
+            "cognate_of": 57,
+            "etymologically_related_to": 10,
+            "derived_from": 1,
+            "value": 68
+        },
+        {
+            "source": 4,
+            "target": 36,
+            "borrowed_from": 1,
+            "cognate_of": 62,
+            "derived_from": 1,
+            "etymologically_related_to": 18,
+            "value": 82
+        },
+        {
+            "source": 4,
+            "target": 37,
+            "borrowed_from": 5,
+            "cognate_of": 2,
+            "derived_from": 2,
+            "value": 9
+        },
+        {
+            "source": 4,
+            "target": 38,
+            "borrowed_from": 2,
+            "cognate_of": 1,
+            "value": 3
+        },
+        {
+            "source": 4,
+            "target": 40,
+            "borrowed_from": 17,
+            "cognate_of": 85,
+            "derived_from": 8,
+            "etymologically_related_to": 20,
+            "value": 130
+        },
+        {
+            "source": 8,
+            "target": 2,
+            "cognate_of": 2,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 8,
+            "target": 5,
+            "borrowed_from": 1,
+            "cognate_of": 3,
+            "derived_from": 5,
+            "etymologically_related_to": 3,
+            "value": 12
+        },
+        {
+            "source": 8,
+            "target": 30,
+            "borrowed_from": 5,
+            "cognate_of": 7,
+            "derived_from": 15,
+            "etymologically_related_to": 5,
+            "value": 32
+        },
+        {
+            "source": 8,
+            "target": 41,
+            "borrowed_from": 253,
+            "calque_of": 5,
+            "cognate_of": 54,
+            "compound_of": 6,
+            "derived_from": 193,
+            "etymologically_related_to": 187,
+            "named_after": 1,
+            "semantic_loan_of": 1,
+            "has_affix": 2,
+            "value": 702
+        },
+        {
+            "source": 8,
+            "target": 9,
+            "borrowed_from": 3,
+            "etymologically_related_to": 3,
+            "cognate_of": 3,
+            "derived_from": 1,
+            "value": 10
+        },
+        {
+            "source": 8,
+            "target": 10,
+            "borrowed_from": 158,
+            "calque_of": 2,
+            "cognate_of": 17,
+            "derived_from": 79,
+            "etymologically_related_to": 17,
+            "value": 273
+        },
+        {
+            "source": 8,
+            "target": 11,
+            "derived_from": 2,
+            "value": 2
+        },
+        {
+            "source": 8,
+            "target": 12,
+            "borrowed_from": 265,
+            "calque_of": 6,
+            "cognate_of": 101,
+            "derived_from": 99,
+            "etymologically_related_to": 77,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 550
+        },
+        {
+            "source": 8,
+            "target": 13,
+            "borrowed_from": 1,
+            "cognate_of": 1,
+            "derived_from": 3,
+            "etymologically_related_to": 8,
+            "value": 13
+        },
+        {
+            "source": 8,
+            "target": 17,
+            "borrowed_from": 2,
+            "derived_from": 18,
+            "etymologically_related_to": 5,
+            "value": 25
+        },
+        {
+            "source": 8,
+            "target": 15,
+            "borrowed_from": 20,
+            "cognate_of": 24,
+            "derived_from": 12,
+            "etymologically_related_to": 8,
+            "value": 64
+        },
+        {
+            "source": 8,
+            "target": 16,
+            "borrowed_from": 1,
+            "etymologically_related_to": 1,
+            "cognate_of": 1,
+            "value": 3
+        },
+        {
+            "source": 8,
+            "target": 6,
+            "cognate_of": 4,
+            "value": 4
+        },
+        {
+            "source": 8,
+            "target": 18,
+            "borrowed_from": 31,
+            "cognate_of": 11,
+            "derived_from": 26,
+            "etymologically_related_to": 10,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "value": 80
+        },
+        {
+            "source": 8,
+            "target": 44,
+            "borrowed_from": 120,
+            "cognate_of": 31,
+            "derived_from": 434,
+            "etymologically_related_to": 116,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "learned_borrowing_from": 3,
+            "phono-semantic_matching_of": 1,
+            "value": 708
+        },
+        {
+            "source": 8,
+            "target": 19,
+            "cognate_of": 160,
+            "etymologically_related_to": 23,
+            "borrowed_from": 2,
+            "derived_from": 1,
+            "value": 186
+        },
+        {
+            "source": 8,
+            "target": 21,
+            "cognate_of": 28,
+            "derived_from": 1,
+            "etymologically_related_to": 4,
+            "value": 33
+        },
+        {
+            "source": 8,
+            "target": 23,
+            "cognate_of": 25,
+            "borrowed_from": 1,
+            "derived_from": 2,
+            "value": 28
+        },
+        {
+            "source": 8,
+            "target": 31,
+            "borrowed_from": 1,
+            "value": 1
+        },
+        {
+            "source": 8,
+            "target": 32,
+            "borrowed_from": 118,
+            "calque_of": 1,
+            "cognate_of": 425,
+            "derived_from": 26,
+            "etymologically_related_to": 31,
+            "value": 601
+        },
+        {
+            "source": 8,
+            "target": 33,
+            "borrowed_from": 9,
+            "cognate_of": 1,
+            "derived_from": 12,
+            "etymologically_related_to": 4,
+            "value": 26
+        },
+        {
+            "source": 8,
+            "target": 34,
+            "cognate_of": 49,
+            "derived_from": 4,
+            "borrowed_from": 3,
+            "etymologically_related_to": 1,
+            "value": 57
+        },
+        {
+            "source": 8,
+            "target": 45,
+            "borrowed_from": 83,
+            "calque_of": 2,
+            "cognate_of": 289,
+            "derived_from": 20,
+            "etymologically_related_to": 57,
+            "value": 451
+        },
+        {
+            "source": 8,
+            "target": 22,
+            "borrowed_from": 9,
+            "cognate_of": 183,
+            "etymologically_related_to": 10,
+            "compound_of": 5,
+            "derived_from": 5,
+            "has_affix": 12,
+            "has_prefix_with_root": 2,
+            "has_suffix": 2,
+            "value": 228
+        },
+        {
+            "source": 8,
+            "target": 36,
+            "borrowed_from": 6,
+            "cognate_of": 40,
+            "etymologically_related_to": 7,
+            "derived_from": 3,
+            "value": 56
+        },
+        {
+            "source": 8,
+            "target": 37,
+            "borrowed_from": 11,
+            "cognate_of": 7,
+            "derived_from": 8,
+            "etymologically_related_to": 3,
+            "value": 29
+        },
+        {
+            "source": 8,
+            "target": 38,
+            "borrowed_from": 1,
+            "derived_from": 3,
+            "etymologically_related_to": 4,
+            "cognate_of": 2,
+            "value": 10
+        },
+        {
+            "source": 8,
+            "target": 40,
+            "borrowed_from": 2,
+            "cognate_of": 2,
+            "etymologically_related_to": 1,
+            "derived_from": 1,
+            "value": 6
+        },
+        {
+            "source": 5,
+            "target": 2,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 5,
+            "target": 20,
+            "calque_of": 1,
+            "value": 1
+        },
+        {
+            "source": 5,
+            "target": 30,
+            "borrowed_from": 15,
+            "calque_of": 7,
+            "cognate_of": 590,
+            "derived_from": 43,
+            "etymologically_related_to": 40,
+            "value": 695
+        },
+        {
+            "source": 5,
+            "target": 41,
+            "borrowed_from": 377,
+            "calque_of": 29,
+            "cognate_of": 2329,
+            "compound_of": 4,
+            "derived_from": 188,
+            "etymologically_related_to": 264,
+            "has_affix": 4,
+            "value": 3195
+        },
+        {
+            "source": 5,
+            "target": 26,
+            "borrowed_from": 34,
+            "cognate_of": 102,
+            "derived_from": 109,
+            "etymologically_related_to": 33,
+            "calque_of": 1,
+            "value": 279
+        },
+        {
+            "source": 5,
+            "target": 9,
+            "cognate_of": 23,
+            "derived_from": 10,
+            "borrowed_from": 2,
+            "calque_of": 1,
+            "etymologically_related_to": 7,
+            "value": 43
+        },
+        {
+            "source": 5,
+            "target": 10,
+            "borrowed_from": 420,
+            "calque_of": 4,
+            "cognate_of": 82,
+            "derived_from": 205,
+            "etymologically_related_to": 79,
+            "has_affix": 2,
+            "value": 792
+        },
+        {
+            "source": 5,
+            "target": 12,
+            "borrowed_from": 209,
+            "calque_of": 170,
+            "cognate_of": 1736,
+            "compound_of": 17,
+            "derived_from": 345,
+            "etymologically_related_to": 222,
+            "has_affix": 10,
+            "has_prefix": 4,
+            "has_prefix_with_root": 10,
+            "has_suffix": 6,
+            "value": 2729
+        },
+        {
+            "source": 5,
+            "target": 13,
+            "cognate_of": 1,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 3
+        },
+        {
+            "source": 5,
+            "target": 17,
+            "borrowed_from": 1,
+            "cognate_of": 1,
+            "derived_from": 9,
+            "etymologically_related_to": 1,
+            "value": 12
+        },
+        {
+            "source": 5,
+            "target": 15,
+            "cognate_of": 1,
+            "derived_from": 4,
+            "value": 5
+        },
+        {
+            "source": 5,
+            "target": 16,
+            "borrowed_from": 200,
+            "cognate_of": 313,
+            "derived_from": 59,
+            "etymologically_related_to": 109,
+            "calque_of": 7,
+            "has_affix": 2,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "phono-semantic_matching_of": 1,
+            "semantic_loan_of": 1,
+            "value": 694
+        },
+        {
+            "source": 5,
+            "target": 6,
+            "cognate_of": 4,
+            "derived_from": 2,
+            "value": 6
+        },
+        {
+            "source": 5,
+            "target": 18,
+            "borrowed_from": 20,
+            "cognate_of": 8,
+            "derived_from": 80,
+            "etymologically_related_to": 29,
+            "has_affix": 2,
+            "value": 139
+        },
+        {
+            "source": 5,
+            "target": 44,
+            "borrowed_from": 121,
+            "calque_of": 19,
+            "cognate_of": 110,
+            "compound_of": 4,
+            "derived_from": 797,
+            "etymologically_related_to": 283,
+            "has_affix": 44,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "learned_borrowing_from": 4,
+            "value": 1384
+        },
+        {
+            "source": 5,
+            "target": 19,
+            "cognate_of": 12,
+            "derived_from": 7,
+            "etymologically_related_to": 2,
+            "value": 21
+        },
+        {
+            "source": 5,
+            "target": 21,
+            "cognate_of": 9,
+            "derived_from": 3,
+            "etymologically_related_to": 1,
+            "value": 13
+        },
+        {
+            "source": 5,
+            "target": 23,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 5,
+            "target": 31,
+            "borrowed_from": 17,
+            "calque_of": 1,
+            "cognate_of": 269,
+            "compound_of": 1,
+            "derived_from": 27,
+            "etymologically_related_to": 22,
+            "value": 337
+        },
+        {
+            "source": 5,
+            "target": 32,
+            "borrowed_from": 8,
+            "cognate_of": 6,
+            "derived_from": 7,
+            "etymologically_related_to": 5,
+            "unadapted_borrowing_from": 1,
+            "value": 27
+        },
+        {
+            "source": 5,
+            "target": 33,
+            "borrowed_from": 8,
+            "derived_from": 15,
+            "etymologically_related_to": 6,
+            "cognate_of": 1,
+            "value": 30
+        },
+        {
+            "source": 5,
+            "target": 34,
+            "cognate_of": 3,
+            "etymologically_related_to": 1,
+            "value": 4
+        },
+        {
+            "source": 5,
+            "target": 45,
+            "borrowed_from": 5,
+            "cognate_of": 14,
+            "derived_from": 4,
+            "etymologically_related_to": 3,
+            "value": 26
+        },
+        {
+            "source": 5,
+            "target": 37,
+            "borrowed_from": 9,
+            "cognate_of": 11,
+            "derived_from": 25,
+            "etymologically_related_to": 7,
+            "value": 52
+        },
+        {
+            "source": 5,
+            "target": 38,
+            "borrowed_from": 35,
+            "calque_of": 4,
+            "cognate_of": 1794,
+            "compound_of": 2,
+            "derived_from": 41,
+            "etymologically_related_to": 132,
+            "value": 2008
+        },
+        {
+            "source": 5,
+            "target": 40,
+            "borrowed_from": 3,
+            "derived_from": 3,
+            "value": 6
+        },
+        {
+            "source": 30,
+            "target": 41,
+            "blend_of": 2,
+            "borrowed_from": 1600,
+            "calque_of": 359,
+            "cognate_of": 4033,
+            "derived_from": 636,
+            "doublet_with": 1,
+            "etymologically_related_to": 1154,
+            "has_prefix_with_root": 2,
+            "has_suffix": 4,
+            "phono-semantic_matching_of": 1,
+            "semantic_loan_of": 4,
+            "compound_of": 14,
+            "value": 7810
+        },
+        {
+            "source": 30,
+            "target": 26,
+            "cognate_of": 41,
+            "derived_from": 9,
+            "etymologically_related_to": 14,
+            "value": 64
+        },
+        {
+            "source": 30,
+            "target": 9,
+            "borrowed_from": 8,
+            "cognate_of": 12,
+            "derived_from": 27,
+            "etymologically_related_to": 4,
+            "compound_of": 2,
+            "learned_borrowing_from": 1,
+            "value": 54
+        },
+        {
+            "source": 30,
+            "target": 10,
+            "borrowed_from": 1797,
+            "calque_of": 49,
+            "cognate_of": 215,
+            "derived_from": 375,
+            "etymologically_related_to": 190,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "learned_borrowing_from": 1,
+            "semantic_loan_of": 2,
+            "value": 2631
+        },
+        {
+            "source": 30,
+            "target": 11,
+            "borrowed_from": 4,
+            "cognate_of": 1,
+            "derived_from": 7,
+            "value": 12
+        },
+        {
+            "source": 30,
+            "target": 12,
+            "borrowed_from": 721,
+            "calque_of": 419,
+            "cognate_of": 2991,
+            "derived_from": 202,
+            "etymologically_related_to": 435,
+            "has_affix": 2,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "value": 4772
+        },
+        {
+            "source": 30,
+            "target": 13,
+            "borrowed_from": 2,
+            "cognate_of": 4,
+            "derived_from": 2,
+            "etymologically_related_to": 2,
+            "value": 10
+        },
+        {
+            "source": 30,
+            "target": 17,
+            "borrowed_from": 34,
+            "calque_of": 3,
+            "cognate_of": 3,
+            "derived_from": 104,
+            "etymologically_related_to": 6,
+            "value": 150
+        },
+        {
+            "source": 30,
+            "target": 15,
+            "borrowed_from": 2,
+            "derived_from": 12,
+            "cognate_of": 2,
+            "etymologically_related_to": 2,
+            "value": 18
+        },
+        {
+            "source": 30,
+            "target": 16,
+            "borrowed_from": 5,
+            "cognate_of": 140,
+            "etymologically_related_to": 44,
+            "calque_of": 1,
+            "compound_of": 2,
+            "derived_from": 10,
+            "value": 202
+        },
+        {
+            "source": 30,
+            "target": 6,
+            "cognate_of": 14,
+            "borrowed_from": 1,
+            "calque_of": 1,
+            "derived_from": 9,
+            "etymologically_related_to": 2,
+            "value": 27
+        },
+        {
+            "source": 30,
+            "target": 18,
+            "borrowed_from": 97,
+            "calque_of": 1,
+            "cognate_of": 43,
+            "derived_from": 213,
+            "etymologically_related_to": 42,
+            "compound_of": 2,
+            "value": 398
+        },
+        {
+            "source": 30,
+            "target": 44,
+            "borrowed_from": 611,
+            "calque_of": 75,
+            "cognate_of": 113,
+            "derived_from": 2342,
+            "etymologically_related_to": 769,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "inherited_from": 1,
+            "learned_borrowing_from": 32,
+            "unadapted_borrowing_from": 1,
+            "value": 3946
+        },
+        {
+            "source": 30,
+            "target": 19,
+            "cognate_of": 42,
+            "etymologically_related_to": 5,
+            "borrowed_from": 3,
+            "derived_from": 12,
+            "value": 62
+        },
+        {
+            "source": 30,
+            "target": 21,
+            "cognate_of": 18,
+            "derived_from": 3,
+            "etymologically_related_to": 6,
+            "borrowed_from": 2,
+            "value": 29
+        },
+        {
+            "source": 30,
+            "target": 27,
+            "cognate_of": 1077,
+            "etymologically_related_to": 22,
+            "derived_from": 5,
+            "value": 1104
+        },
+        {
+            "source": 30,
+            "target": 31,
+            "borrowed_from": 3,
+            "cognate_of": 35,
+            "derived_from": 3,
+            "etymologically_related_to": 4,
+            "value": 45
+        },
+        {
+            "source": 30,
+            "target": 32,
+            "borrowed_from": 25,
+            "cognate_of": 9,
+            "derived_from": 36,
+            "etymologically_related_to": 8,
+            "value": 78
+        },
+        {
+            "source": 30,
+            "target": 33,
+            "borrowed_from": 53,
+            "cognate_of": 14,
+            "derived_from": 48,
+            "etymologically_related_to": 13,
+            "compound_of": 2,
+            "value": 130
+        },
+        {
+            "source": 30,
+            "target": 34,
+            "derived_from": 8,
+            "borrowed_from": 1,
+            "cognate_of": 1,
+            "etymologically_related_to": 4,
+            "value": 14
+        },
+        {
+            "source": 30,
+            "target": 45,
+            "borrowed_from": 131,
+            "calque_of": 7,
+            "cognate_of": 24,
+            "derived_from": 33,
+            "etymologically_related_to": 17,
+            "compound_of": 4,
+            "value": 216
+        },
+        {
+            "source": 30,
+            "target": 22,
+            "derived_from": 5,
+            "borrowed_from": 1,
+            "etymologically_related_to": 1,
+            "value": 7
+        },
+        {
+            "source": 30,
+            "target": 37,
+            "borrowed_from": 120,
+            "calque_of": 2,
+            "cognate_of": 29,
+            "derived_from": 71,
+            "etymologically_related_to": 18,
+            "has_affix": 2,
+            "value": 242
+        },
+        {
+            "source": 30,
+            "target": 38,
+            "borrowed_from": 33,
+            "calque_of": 1,
+            "cognate_of": 541,
+            "derived_from": 24,
+            "etymologically_related_to": 64,
+            "value": 663
+        },
+        {
+            "source": 30,
+            "target": 40,
+            "borrowed_from": 9,
+            "calque_of": 1,
+            "cognate_of": 1,
+            "derived_from": 9,
+            "value": 20
+        },
+        {
+            "source": 41,
+            "target": 7,
+            "borrowed_from": 27,
+            "cognate_of": 50,
+            "compound_of": 2,
+            "derived_from": 19,
+            "etymologically_related_to": 14,
+            "calque_of": 3,
+            "value": 115
+        },
+        {
+            "source": 41,
+            "target": 26,
+            "borrowed_from": 21,
+            "cognate_of": 203,
+            "derived_from": 56,
+            "etymologically_related_to": 81,
+            "calque_of": 1,
+            "semantic_loan_of": 1,
+            "value": 363
+        },
+        {
+            "source": 41,
+            "target": 9,
+            "borrowed_from": 531,
+            "calque_of": 244,
+            "cognate_of": 211,
+            "derived_from": 343,
+            "etymologically_related_to": 178,
+            "has_affix": 1,
+            "learned_borrowing_from": 4,
+            "semantic_loan_of": 4,
+            "unadapted_borrowing_from": 42,
+            "value": 1558
+        },
+        {
+            "source": 41,
+            "target": 10,
+            "back-formation_from": 1,
+            "blend_of": 2,
+            "borrowed_from": 5249,
+            "calque_of": 180,
+            "cognate_of": 2557,
+            "compound_of": 7,
+            "derived_from": 3813,
+            "etymologically_related_to": 2986,
+            "has_affix": 35,
+            "has_confix": 4,
+            "has_prefix": 4,
+            "has_prefix_with_root": 17,
+            "has_suffix": 18,
+            "learned_borrowing_from": 3,
+            "named_after": 1,
+            "semantic_loan_of": 8,
+            "unadapted_borrowing_from": 13,
+            "doublet_with": 3,
+            "orthographic_borrowing_from": 1,
+            "value": 14902
+        },
+        {
+            "source": 41,
+            "target": 11,
+            "blend_of": 2,
+            "borrowed_from": 122,
+            "cognate_of": 7,
+            "derived_from": 47,
+            "etymologically_related_to": 28,
+            "calque_of": 2,
+            "has_suffix": 1,
+            "value": 209
+        },
+        {
+            "source": 41,
+            "target": 12,
+            "blend_of": 9,
+            "borrowed_from": 2957,
+            "calque_of": 261,
+            "cognate_of": 5686,
+            "compound_of": 57,
+            "derived_from": 1349,
+            "etymologically_related_to": 2273,
+            "has_affix": 40,
+            "has_prefix": 3,
+            "has_prefix_with_root": 10,
+            "has_suffix": 9,
+            "semantic_loan_of": 5,
+            "back-formation_from": 1,
+            "phono-semantic_matching_of": 3,
+            "unadapted_borrowing_from": 2,
+            "value": 12665
+        },
+        {
+            "source": 41,
+            "target": 13,
+            "borrowed_from": 316,
+            "calque_of": 97,
+            "cognate_of": 73,
+            "compound_of": 4,
+            "derived_from": 196,
+            "etymologically_related_to": 216,
+            "has_affix": 1,
+            "has_prefix_with_root": 2,
+            "has_suffix": 2,
+            "learned_borrowing_from": 2,
+            "orthographic_borrowing_from": 3,
+            "semantic_loan_of": 8,
+            "unadapted_borrowing_from": 2,
+            "value": 922
+        },
+        {
+            "source": 41,
+            "target": 17,
+            "borrowed_from": 532,
+            "calque_of": 35,
+            "cognate_of": 77,
+            "compound_of": 2,
+            "derived_from": 624,
+            "etymologically_related_to": 309,
+            "has_affix": 2,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "named_after": 1,
+            "semantic_loan_of": 1,
+            "value": 1585
+        },
+        {
+            "source": 41,
+            "target": 15,
+            "blend_of": 4,
+            "borrowed_from": 384,
+            "calque_of": 23,
+            "cognate_of": 30,
+            "compound_of": 6,
+            "derived_from": 278,
+            "etymologically_related_to": 102,
+            "has_affix": 2,
+            "value": 829
+        },
+        {
+            "source": 41,
+            "target": 16,
+            "borrowed_from": 73,
+            "calque_of": 13,
+            "cognate_of": 1833,
+            "derived_from": 118,
+            "etymologically_related_to": 310,
+            "phono-semantic_matching_of": 2,
+            "value": 2349
+        },
+        {
+            "source": 41,
+            "target": 6,
+            "borrowed_from": 783,
+            "cognate_of": 246,
+            "compound_of": 2,
+            "derived_from": 722,
+            "etymologically_related_to": 775,
+            "has_affix": 2,
+            "calque_of": 114,
+            "semantic_loan_of": 5,
+            "value": 2649
+        },
+        {
+            "source": 41,
+            "target": 18,
+            "blend_of": 4,
+            "borrowed_from": 2893,
+            "calque_of": 95,
+            "cognate_of": 512,
+            "derived_from": 913,
+            "etymologically_related_to": 1054,
+            "has_affix": 18,
+            "has_prefix": 12,
+            "has_prefix_with_root": 15,
+            "has_suffix": 4,
+            "learned_borrowing_from": 1,
+            "named_after": 2,
+            "unadapted_borrowing_from": 13,
+            "doublet_with": 1,
+            "value": 5537
+        },
+        {
+            "source": 41,
+            "target": 44,
+            "blend_of": 4,
+            "borrowed_from": 3509,
+            "calque_of": 88,
+            "clipping_of": 47,
+            "cognate_of": 1358,
+            "compound_of": 73,
+            "derived_from": 18163,
+            "etymologically_related_to": 18058,
+            "has_affix": 366,
+            "has_confix": 12,
+            "has_prefix": 53,
+            "has_prefix_with_root": 96,
+            "has_suffix": 53,
+            "inherited_from": 6,
+            "learned_borrowing_from": 101,
+            "semantic_loan_of": 1,
+            "unadapted_borrowing_from": 35,
+            "phono-semantic_matching_of": 1,
+            "value": 42024
+        },
+        {
+            "source": 41,
+            "target": 19,
+            "borrowed_from": 26,
+            "cognate_of": 240,
+            "derived_from": 29,
+            "etymologically_related_to": 76,
+            "value": 371
+        },
+        {
+            "source": 41,
+            "target": 21,
+            "borrowed_from": 42,
+            "cognate_of": 312,
+            "derived_from": 15,
+            "etymologically_related_to": 48,
+            "calque_of": 3,
+            "value": 420
+        },
+        {
+            "source": 41,
+            "target": 27,
+            "borrowed_from": 6,
+            "cognate_of": 795,
+            "derived_from": 21,
+            "etymologically_related_to": 40,
+            "value": 862
+        },
+        {
+            "source": 41,
+            "target": 23,
+            "borrowed_from": 71,
+            "cognate_of": 7,
+            "derived_from": 49,
+            "etymologically_related_to": 8,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "calque_of": 1,
+            "semantic_loan_of": 1,
+            "value": 139
+        },
+        {
+            "source": 41,
+            "target": 24,
+            "borrowed_from": 92,
+            "cognate_of": 7,
+            "derived_from": 20,
+            "etymologically_related_to": 33,
+            "calque_of": 4,
+            "value": 156
+        },
+        {
+            "source": 41,
+            "target": 31,
+            "borrowed_from": 129,
+            "cognate_of": 617,
+            "compound_of": 2,
+            "derived_from": 74,
+            "etymologically_related_to": 123,
+            "learned_borrowing_from": 1,
+            "value": 946
+        },
+        {
+            "source": 41,
+            "target": 32,
+            "borrowed_from": 1458,
+            "calque_of": 73,
+            "cognate_of": 96,
+            "derived_from": 348,
+            "etymologically_related_to": 397,
+            "has_affix": 7,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "unadapted_borrowing_from": 11,
+            "value": 2392
+        },
+        {
+            "source": 41,
+            "target": 33,
+            "borrowed_from": 1013,
+            "calque_of": 34,
+            "cognate_of": 299,
+            "compound_of": 2,
+            "derived_from": 367,
+            "etymologically_related_to": 292,
+            "has_prefix": 3,
+            "has_prefix_with_root": 5,
+            "has_suffix": 2,
+            "blend_of": 4,
+            "has_affix": 2,
+            "named_after": 1,
+            "phono-semantic_matching_of": 1,
+            "unadapted_borrowing_from": 75,
+            "value": 2100
+        },
+        {
+            "source": 41,
+            "target": 34,
+            "borrowed_from": 568,
+            "calque_of": 6,
+            "cognate_of": 55,
+            "derived_from": 61,
+            "etymologically_related_to": 61,
+            "unadapted_borrowing_from": 91,
+            "value": 842
+        },
+        {
+            "source": 41,
+            "target": 45,
+            "borrowed_from": 1431,
+            "calque_of": 51,
+            "cognate_of": 413,
+            "derived_from": 473,
+            "etymologically_related_to": 622,
+            "has_affix": 9,
+            "has_prefix_with_root": 2,
+            "has_suffix": 2,
+            "learned_borrowing_from": 1,
+            "orthographic_borrowing_from": 1,
+            "named_after": 1,
+            "semantic_loan_of": 2,
+            "value": 3008
+        },
+        {
+            "source": 41,
+            "target": 22,
+            "borrowed_from": 61,
+            "cognate_of": 13,
+            "derived_from": 80,
+            "etymologically_related_to": 21,
+            "value": 175
+        },
+        {
+            "source": 41,
+            "target": 36,
+            "borrowed_from": 41,
+            "cognate_of": 12,
+            "derived_from": 33,
+            "etymologically_related_to": 16,
+            "calque_of": 2,
+            "value": 104
+        },
+        {
+            "source": 41,
+            "target": 37,
+            "blend_of": 4,
+            "borrowed_from": 2798,
+            "calque_of": 103,
+            "clipping_of": 1,
+            "cognate_of": 1388,
+            "compound_of": 7,
+            "derived_from": 724,
+            "etymologically_related_to": 1041,
+            "has_affix": 19,
+            "has_prefix": 2,
+            "has_prefix_with_root": 12,
+            "has_suffix": 11,
+            "unadapted_borrowing_from": 180,
+            "named_after": 1,
+            "value": 6291
+        },
+        {
+            "source": 41,
+            "target": 38,
+            "borrowed_from": 450,
+            "calque_of": 51,
+            "cognate_of": 2550,
+            "compound_of": 4,
+            "derived_from": 187,
+            "etymologically_related_to": 569,
+            "has_affix": 8,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "named_after": 1,
+            "value": 3822
+        },
+        {
+            "source": 41,
+            "target": 40,
+            "borrowed_from": 206,
+            "calque_of": 9,
+            "cognate_of": 111,
+            "derived_from": 171,
+            "etymologically_related_to": 80,
+            "semantic_loan_of": 4,
+            "value": 581
+        },
+        {
+            "source": 7,
+            "target": 2,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 7,
+            "target": 0,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 7,
+            "target": 5,
+            "borrowed_from": 3,
+            "cognate_of": 5,
+            "etymologically_related_to": 2,
+            "value": 10
+        },
+        {
+            "source": 7,
+            "target": 30,
+            "borrowed_from": 1,
+            "calque_of": 1,
+            "cognate_of": 21,
+            "derived_from": 3,
+            "etymologically_related_to": 2,
+            "value": 28
+        },
+        {
+            "source": 7,
+            "target": 26,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 7,
+            "target": 9,
+            "borrowed_from": 61,
+            "cognate_of": 1735,
+            "compound_of": 2,
+            "derived_from": 8,
+            "etymologically_related_to": 164,
+            "value": 1970
+        },
+        {
+            "source": 7,
+            "target": 10,
+            "borrowed_from": 13,
+            "cognate_of": 2,
+            "derived_from": 19,
+            "etymologically_related_to": 5,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 41
+        },
+        {
+            "source": 7,
+            "target": 12,
+            "borrowed_from": 39,
+            "calque_of": 4,
+            "cognate_of": 73,
+            "compound_of": 2,
+            "derived_from": 95,
+            "etymologically_related_to": 32,
+            "value": 245
+        },
+        {
+            "source": 7,
+            "target": 13,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 7,
+            "target": 17,
+            "borrowed_from": 1,
+            "derived_from": 4,
+            "value": 5
+        },
+        {
+            "source": 7,
+            "target": 15,
+            "cognate_of": 143,
+            "derived_from": 2,
+            "etymologically_related_to": 14,
+            "value": 159
+        },
+        {
+            "source": 7,
+            "target": 16,
+            "cognate_of": 5,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 7
+        },
+        {
+            "source": 7,
+            "target": 6,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 7,
+            "target": 18,
+            "borrowed_from": 2,
+            "cognate_of": 2,
+            "derived_from": 9,
+            "value": 13
+        },
+        {
+            "source": 7,
+            "target": 44,
+            "borrowed_from": 10,
+            "cognate_of": 6,
+            "derived_from": 64,
+            "etymologically_related_to": 27,
+            "value": 107
+        },
+        {
+            "source": 7,
+            "target": 19,
+            "cognate_of": 74,
+            "derived_from": 14,
+            "etymologically_related_to": 15,
+            "borrowed_from": 7,
+            "value": 110
+        },
+        {
+            "source": 7,
+            "target": 21,
+            "cognate_of": 65,
+            "derived_from": 2,
+            "etymologically_related_to": 9,
+            "value": 76
+        },
+        {
+            "source": 7,
+            "target": 31,
+            "cognate_of": 2,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 7,
+            "target": 32,
+            "borrowed_from": 1,
+            "derived_from": 1,
+            "value": 2
+        },
+        {
+            "source": 7,
+            "target": 33,
+            "derived_from": 4,
+            "borrowed_from": 1,
+            "value": 5
+        },
+        {
+            "source": 7,
+            "target": 45,
+            "borrowed_from": 24,
+            "calque_of": 1,
+            "cognate_of": 16,
+            "derived_from": 24,
+            "etymologically_related_to": 10,
+            "value": 75
+        },
+        {
+            "source": 7,
+            "target": 37,
+            "borrowed_from": 6,
+            "cognate_of": 2,
+            "derived_from": 1,
+            "value": 9
+        },
+        {
+            "source": 7,
+            "target": 38,
+            "borrowed_from": 10,
+            "cognate_of": 46,
+            "derived_from": 27,
+            "etymologically_related_to": 23,
+            "value": 106
+        },
+        {
+            "source": 7,
+            "target": 40,
+            "cognate_of": 1,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 3
+        },
+        {
+            "source": 26,
+            "target": 2,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 26,
+            "target": 8,
+            "derived_from": 3,
+            "value": 3
+        },
+        {
+            "source": 26,
+            "target": 9,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "cognate_of": 4,
+            "value": 7
+        },
+        {
+            "source": 26,
+            "target": 10,
+            "borrowed_from": 3,
+            "cognate_of": 2,
+            "derived_from": 34,
+            "etymologically_related_to": 4,
+            "value": 43
+        },
+        {
+            "source": 26,
+            "target": 11,
+            "derived_from": 2,
+            "value": 2
+        },
+        {
+            "source": 26,
+            "target": 12,
+            "borrowed_from": 8,
+            "cognate_of": 80,
+            "derived_from": 37,
+            "etymologically_related_to": 23,
+            "value": 148
+        },
+        {
+            "source": 26,
+            "target": 13,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 26,
+            "target": 17,
+            "cognate_of": 4,
+            "derived_from": 21,
+            "etymologically_related_to": 13,
+            "value": 38
+        },
+        {
+            "source": 26,
+            "target": 15,
+            "borrowed_from": 1,
+            "derived_from": 1,
+            "value": 2
+        },
+        {
+            "source": 26,
+            "target": 16,
+            "borrowed_from": 2,
+            "cognate_of": 309,
+            "derived_from": 2,
+            "etymologically_related_to": 35,
+            "value": 348
+        },
+        {
+            "source": 26,
+            "target": 6,
+            "borrowed_from": 1,
+            "cognate_of": 3,
+            "derived_from": 3,
+            "etymologically_related_to": 1,
+            "value": 8
+        },
+        {
+            "source": 26,
+            "target": 18,
+            "borrowed_from": 2,
+            "derived_from": 13,
+            "etymologically_related_to": 4,
+            "value": 19
+        },
+        {
+            "source": 26,
+            "target": 44,
+            "borrowed_from": 12,
+            "calque_of": 1,
+            "cognate_of": 19,
+            "derived_from": 186,
+            "etymologically_related_to": 34,
+            "value": 252
+        },
+        {
+            "source": 26,
+            "target": 19,
+            "cognate_of": 2,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 26,
+            "target": 21,
+            "cognate_of": 7,
+            "derived_from": 3,
+            "etymologically_related_to": 2,
+            "value": 12
+        },
+        {
+            "source": 26,
+            "target": 31,
+            "cognate_of": 31,
+            "derived_from": 2,
+            "etymologically_related_to": 12,
+            "value": 45
+        },
+        {
+            "source": 26,
+            "target": 33,
+            "cognate_of": 2,
+            "derived_from": 8,
+            "etymologically_related_to": 2,
+            "value": 12
+        },
+        {
+            "source": 26,
+            "target": 45,
+            "cognate_of": 1,
+            "derived_from": 12,
+            "borrowed_from": 2,
+            "value": 15
+        },
+        {
+            "source": 26,
+            "target": 22,
+            "cognate_of": 3,
+            "derived_from": 3,
+            "borrowed_from": 1,
+            "value": 7
+        },
+        {
+            "source": 26,
+            "target": 36,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 26,
+            "target": 37,
+            "borrowed_from": 6,
+            "cognate_of": 3,
+            "derived_from": 15,
+            "etymologically_related_to": 3,
+            "value": 27
+        },
+        {
+            "source": 26,
+            "target": 38,
+            "borrowed_from": 1,
+            "cognate_of": 130,
+            "derived_from": 3,
+            "etymologically_related_to": 29,
+            "value": 163
+        },
+        {
+            "source": 26,
+            "target": 40,
+            "borrowed_from": 2,
+            "cognate_of": 1,
+            "derived_from": 2,
+            "value": 5
+        },
+        {
+            "source": 9,
+            "target": 2,
+            "cognate_of": 1,
+            "derived_from": 1,
+            "value": 2
+        },
+        {
+            "source": 9,
+            "target": 10,
+            "borrowed_from": 89,
+            "calque_of": 8,
+            "cognate_of": 21,
+            "derived_from": 252,
+            "etymologically_related_to": 14,
+            "learned_borrowing_from": 2,
+            "value": 386
+        },
+        {
+            "source": 9,
+            "target": 11,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 9,
+            "target": 12,
+            "borrowed_from": 94,
+            "calque_of": 65,
+            "cognate_of": 126,
+            "derived_from": 181,
+            "etymologically_related_to": 71,
+            "learned_borrowing_from": 2,
+            "semantic_loan_of": 3,
+            "value": 542
+        },
+        {
+            "source": 9,
+            "target": 13,
+            "borrowed_from": 4,
+            "etymologically_related_to": 3,
+            "derived_from": 1,
+            "value": 8
+        },
+        {
+            "source": 9,
+            "target": 17,
+            "borrowed_from": 13,
+            "cognate_of": 1,
+            "derived_from": 13,
+            "etymologically_related_to": 2,
+            "value": 29
+        },
+        {
+            "source": 9,
+            "target": 15,
+            "borrowed_from": 6,
+            "cognate_of": 327,
+            "derived_from": 6,
+            "etymologically_related_to": 35,
+            "value": 374
+        },
+        {
+            "source": 9,
+            "target": 16,
+            "borrowed_from": 4,
+            "cognate_of": 47,
+            "etymologically_related_to": 5,
+            "value": 56
+        },
+        {
+            "source": 9,
+            "target": 18,
+            "borrowed_from": 53,
+            "calque_of": 1,
+            "cognate_of": 6,
+            "derived_from": 67,
+            "etymologically_related_to": 16,
+            "has_affix": 2,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 147
+        },
+        {
+            "source": 9,
+            "target": 44,
+            "borrowed_from": 87,
+            "calque_of": 11,
+            "cognate_of": 14,
+            "derived_from": 487,
+            "etymologically_related_to": 101,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "learned_borrowing_from": 12,
+            "semantic_loan_of": 3,
+            "value": 717
+        },
+        {
+            "source": 9,
+            "target": 19,
+            "borrowed_from": 3,
+            "cognate_of": 105,
+            "derived_from": 1,
+            "etymologically_related_to": 8,
+            "value": 117
+        },
+        {
+            "source": 9,
+            "target": 21,
+            "cognate_of": 128,
+            "etymologically_related_to": 13,
+            "value": 141
+        },
+        {
+            "source": 9,
+            "target": 23,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 9,
+            "target": 31,
+            "borrowed_from": 4,
+            "calque_of": 1,
+            "cognate_of": 20,
+            "derived_from": 9,
+            "etymologically_related_to": 8,
+            "value": 42
+        },
+        {
+            "source": 9,
+            "target": 32,
+            "cognate_of": 6,
+            "derived_from": 5,
+            "borrowed_from": 1,
+            "value": 12
+        },
+        {
+            "source": 9,
+            "target": 33,
+            "borrowed_from": 8,
+            "calque_of": 1,
+            "derived_from": 14,
+            "value": 23
+        },
+        {
+            "source": 9,
+            "target": 34,
+            "borrowed_from": 1,
+            "calque_of": 1,
+            "etymologically_related_to": 1,
+            "value": 3
+        },
+        {
+            "source": 9,
+            "target": 45,
+            "borrowed_from": 213,
+            "calque_of": 2,
+            "cognate_of": 76,
+            "derived_from": 87,
+            "etymologically_related_to": 64,
+            "value": 442
+        },
+        {
+            "source": 9,
+            "target": 22,
+            "cognate_of": 1,
+            "borrowed_from": 1,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 9,
+            "target": 36,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 2
+        },
+        {
+            "source": 9,
+            "target": 37,
+            "borrowed_from": 30,
+            "calque_of": 3,
+            "cognate_of": 4,
+            "derived_from": 33,
+            "etymologically_related_to": 5,
+            "value": 75
+        },
+        {
+            "source": 9,
+            "target": 38,
+            "borrowed_from": 1177,
+            "calque_of": 106,
+            "cognate_of": 318,
+            "compound_of": 4,
+            "derived_from": 479,
+            "etymologically_related_to": 284,
+            "has_prefix_with_root": 2,
+            "has_suffix": 2,
+            "semantic_loan_of": 7,
+            "value": 2379
+        },
+        {
+            "source": 9,
+            "target": 40,
+            "borrowed_from": 8,
+            "cognate_of": 2,
+            "derived_from": 7,
+            "value": 17
+        },
+        {
+            "source": 10,
+            "target": 11,
+            "borrowed_from": 25,
+            "derived_from": 95,
+            "calque_of": 1,
+            "etymologically_related_to": 2,
+            "value": 123
+        },
+        {
+            "source": 10,
+            "target": 12,
+            "borrowed_from": 1438,
+            "calque_of": 50,
+            "cognate_of": 307,
+            "compound_of": 6,
+            "derived_from": 352,
+            "etymologically_related_to": 153,
+            "learned_borrowing_from": 1,
+            "unadapted_borrowing_from": 1,
+            "value": 2308
+        },
+        {
+            "source": 10,
+            "target": 13,
+            "borrowed_from": 245,
+            "cognate_of": 13,
+            "derived_from": 158,
+            "etymologically_related_to": 61,
+            "calque_of": 154,
+            "learned_borrowing_from": 10,
+            "orthographic_borrowing_from": 4,
+            "semantic_loan_of": 18,
+            "unadapted_borrowing_from": 7,
+            "value": 670
+        },
+        {
+            "source": 10,
+            "target": 17,
+            "borrowed_from": 22,
+            "cognate_of": 13,
+            "derived_from": 58,
+            "etymologically_related_to": 10,
+            "calque_of": 4,
+            "has_affix": 2,
+            "phono-semantic_matching_of": 1,
+            "value": 110
+        },
+        {
+            "source": 10,
+            "target": 15,
+            "borrowed_from": 80,
+            "derived_from": 480,
+            "calque_of": 2,
+            "cognate_of": 21,
+            "etymologically_related_to": 99,
+            "value": 682
+        },
+        {
+            "source": 10,
+            "target": 16,
+            "borrowed_from": 19,
+            "cognate_of": 27,
+            "derived_from": 53,
+            "etymologically_related_to": 16,
+            "has_affix": 2,
+            "value": 117
+        },
+        {
+            "source": 10,
+            "target": 6,
+            "cognate_of": 40,
+            "derived_from": 60,
+            "etymologically_related_to": 18,
+            "borrowed_from": 40,
+            "calque_of": 2,
+            "has_affix": 2,
+            "value": 162
+        },
+        {
+            "source": 10,
+            "target": 18,
+            "borrowed_from": 1075,
+            "calque_of": 75,
+            "cognate_of": 1563,
+            "derived_from": 461,
+            "etymologically_related_to": 333,
+            "has_affix": 2,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "semantic_loan_of": 1,
+            "unadapted_borrowing_from": 16,
+            "compound_of": 2,
+            "semi_learned_borrowing_from": 10,
+            "value": 3540
+        },
+        {
+            "source": 10,
+            "target": 44,
+            "borrowed_from": 2474,
+            "calque_of": 24,
+            "cognate_of": 108,
+            "compound_of": 13,
+            "derived_from": 4144,
+            "etymologically_related_to": 3655,
+            "has_affix": 16,
+            "has_prefix": 5,
+            "has_prefix_with_root": 10,
+            "has_suffix": 5,
+            "inherited_from": 2135,
+            "learned_borrowing_from": 81,
+            "semi_learned_borrowing_from": 5,
+            "unadapted_borrowing_from": 14,
+            "value": 12689
+        },
+        {
+            "source": 10,
+            "target": 19,
+            "cognate_of": 34,
+            "borrowed_from": 28,
+            "calque_of": 1,
+            "derived_from": 30,
+            "etymologically_related_to": 6,
+            "value": 99
+        },
+        {
+            "source": 10,
+            "target": 21,
+            "cognate_of": 7,
+            "derived_from": 12,
+            "etymologically_related_to": 2,
+            "borrowed_from": 24,
+            "value": 45
+        },
+        {
+            "source": 10,
+            "target": 27,
+            "cognate_of": 34,
+            "borrowed_from": 222,
+            "calque_of": 1,
+            "derived_from": 86,
+            "etymologically_related_to": 6,
+            "unadapted_borrowing_from": 4,
+            "value": 353
+        },
+        {
+            "source": 10,
+            "target": 23,
+            "derived_from": 60,
+            "borrowed_from": 47,
+            "calque_of": 2,
+            "cognate_of": 1,
+            "etymologically_related_to": 5,
+            "value": 115
+        },
+        {
+            "source": 10,
+            "target": 24,
+            "cognate_of": 16,
+            "borrowed_from": 3,
+            "derived_from": 4,
+            "value": 23
+        },
+        {
+            "source": 10,
+            "target": 31,
+            "borrowed_from": 12,
+            "cognate_of": 17,
+            "derived_from": 10,
+            "etymologically_related_to": 2,
+            "value": 41
+        },
+        {
+            "source": 10,
+            "target": 32,
+            "borrowed_from": 1533,
+            "cognate_of": 13,
+            "derived_from": 186,
+            "etymologically_related_to": 39,
+            "calque_of": 22,
+            "value": 1793
+        },
+        {
+            "source": 10,
+            "target": 33,
+            "borrowed_from": 711,
+            "calque_of": 18,
+            "cognate_of": 624,
+            "derived_from": 323,
+            "etymologically_related_to": 155,
+            "unadapted_borrowing_from": 10,
+            "value": 1841
+        },
+        {
+            "source": 10,
+            "target": 34,
+            "borrowed_from": 21677,
+            "cognate_of": 294,
+            "derived_from": 595,
+            "etymologically_related_to": 139,
+            "calque_of": 60,
+            "has_prefix_with_root": 1,
+            "has_suffix": 2,
+            "unadapted_borrowing_from": 11,
+            "value": 22779
+        },
+        {
+            "source": 10,
+            "target": 45,
+            "borrowed_from": 1021,
+            "calque_of": 44,
+            "cognate_of": 57,
+            "derived_from": 131,
+            "etymologically_related_to": 62,
+            "semantic_loan_of": 1,
+            "has_affix": 2,
+            "value": 1318
+        },
+        {
+            "source": 10,
+            "target": 22,
+            "borrowed_from": 24,
+            "cognate_of": 1,
+            "derived_from": 31,
+            "etymologically_related_to": 2,
+            "value": 58
+        },
+        {
+            "source": 10,
+            "target": 36,
+            "cognate_of": 2,
+            "borrowed_from": 10,
+            "calque_of": 1,
+            "derived_from": 6,
+            "etymologically_related_to": 1,
+            "value": 20
+        },
+        {
+            "source": 10,
+            "target": 37,
+            "borrowed_from": 1105,
+            "calque_of": 29,
+            "clipping_of": 1,
+            "cognate_of": 1034,
+            "derived_from": 167,
+            "etymologically_related_to": 200,
+            "has_prefix_with_root": 2,
+            "has_suffix": 2,
+            "semantic_loan_of": 1,
+            "has_affix": 2,
+            "unadapted_borrowing_from": 6,
+            "value": 2549
+        },
+        {
+            "source": 10,
+            "target": 38,
+            "borrowed_from": 271,
+            "cognate_of": 107,
+            "derived_from": 208,
+            "etymologically_related_to": 50,
+            "calque_of": 5,
+            "value": 641
+        },
+        {
+            "source": 10,
+            "target": 40,
+            "borrowed_from": 1335,
+            "cognate_of": 25,
+            "derived_from": 183,
+            "etymologically_related_to": 32,
+            "calque_of": 3,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "phono-semantic_matching_of": 2,
+            "value": 1582
+        },
+        {
+            "source": 35,
+            "target": 1,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 2
+        },
+        {
+            "source": 35,
+            "target": 10,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 35,
+            "target": 13,
+            "borrowed_from": 1,
+            "value": 1
+        },
+        {
+            "source": 35,
+            "target": 44,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 35,
+            "target": 32,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 35,
+            "target": 34,
+            "borrowed_from": 4,
+            "has_affix": 4,
+            "value": 8
+        },
+        {
+            "source": 35,
+            "target": 45,
+            "borrowed_from": 6,
+            "value": 6
+        },
+        {
+            "source": 35,
+            "target": 40,
+            "borrowed_from": 1,
+            "cognate_of": 19,
+            "etymologically_related_to": 1,
+            "value": 21
+        },
+        {
+            "source": 11,
+            "target": 4,
+            "cognate_of": 2,
+            "value": 2
+        },
+        {
+            "source": 11,
+            "target": 5,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 11,
+            "target": 12,
+            "borrowed_from": 10,
+            "cognate_of": 3,
+            "derived_from": 32,
+            "etymologically_related_to": 7,
+            "value": 52
+        },
+        {
+            "source": 11,
+            "target": 13,
+            "borrowed_from": 5,
+            "derived_from": 6,
+            "etymologically_related_to": 12,
+            "value": 23
+        },
+        {
+            "source": 11,
+            "target": 17,
+            "borrowed_from": 3,
+            "derived_from": 10,
+            "value": 13
+        },
+        {
+            "source": 11,
+            "target": 15,
+            "borrowed_from": 1,
+            "cognate_of": 1,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 11,
+            "target": 6,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 11,
+            "target": 18,
+            "borrowed_from": 7,
+            "cognate_of": 3,
+            "derived_from": 17,
+            "etymologically_related_to": 3,
+            "value": 30
+        },
+        {
+            "source": 11,
+            "target": 44,
+            "borrowed_from": 13,
+            "calque_of": 1,
+            "cognate_of": 6,
+            "derived_from": 87,
+            "etymologically_related_to": 8,
+            "value": 115
+        },
+        {
+            "source": 11,
+            "target": 19,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 11,
+            "target": 21,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 11,
+            "target": 32,
+            "cognate_of": 1,
+            "derived_from": 12,
+            "etymologically_related_to": 2,
+            "value": 15
+        },
+        {
+            "source": 11,
+            "target": 33,
+            "derived_from": 6,
+            "etymologically_related_to": 2,
+            "borrowed_from": 2,
+            "value": 10
+        },
+        {
+            "source": 11,
+            "target": 45,
+            "borrowed_from": 201,
+            "calque_of": 12,
+            "cognate_of": 19,
+            "derived_from": 23,
+            "etymologically_related_to": 29,
+            "semantic_loan_of": 1,
+            "value": 285
+        },
+        {
+            "source": 11,
+            "target": 37,
+            "borrowed_from": 2,
+            "cognate_of": 1,
+            "derived_from": 4,
+            "etymologically_related_to": 2,
+            "value": 9
+        },
+        {
+            "source": 11,
+            "target": 38,
+            "cognate_of": 1,
+            "derived_from": 2,
+            "value": 3
+        },
+        {
+            "source": 11,
+            "target": 40,
+            "borrowed_from": 16,
+            "calque_of": 1,
+            "cognate_of": 14,
+            "derived_from": 16,
+            "etymologically_related_to": 9,
+            "value": 56
+        },
+        {
+            "source": 12,
+            "target": 13,
+            "borrowed_from": 20,
+            "cognate_of": 8,
+            "etymologically_related_to": 11,
+            "calque_of": 21,
+            "derived_from": 10,
+            "semantic_loan_of": 1,
+            "value": 71
+        },
+        {
+            "source": 12,
+            "target": 17,
+            "borrowed_from": 48,
+            "calque_of": 13,
+            "cognate_of": 8,
+            "derived_from": 88,
+            "etymologically_related_to": 18,
+            "semantic_loan_of": 1,
+            "value": 176
+        },
+        {
+            "source": 12,
+            "target": 15,
+            "borrowed_from": 508,
+            "calque_of": 61,
+            "cognate_of": 80,
+            "derived_from": 836,
+            "etymologically_related_to": 192,
+            "has_affix": 2,
+            "value": 1679
+        },
+        {
+            "source": 12,
+            "target": 16,
+            "borrowed_from": 22,
+            "cognate_of": 310,
+            "derived_from": 41,
+            "etymologically_related_to": 85,
+            "calque_of": 2,
+            "value": 460
+        },
+        {
+            "source": 12,
+            "target": 6,
+            "borrowed_from": 7,
+            "cognate_of": 24,
+            "derived_from": 19,
+            "calque_of": 2,
+            "etymologically_related_to": 7,
+            "value": 59
+        },
+        {
+            "source": 12,
+            "target": 18,
+            "borrowed_from": 272,
+            "calque_of": 5,
+            "cognate_of": 157,
+            "derived_from": 156,
+            "etymologically_related_to": 91,
+            "has_affix": 2,
+            "named_after": 1,
+            "unadapted_borrowing_from": 1,
+            "value": 685
+        },
+        {
+            "source": 12,
+            "target": 44,
+            "borrowed_from": 909,
+            "calque_of": 66,
+            "cognate_of": 241,
+            "derived_from": 1348,
+            "doublet_with": 1,
+            "etymologically_related_to": 533,
+            "has_affix": 6,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "inherited_from": 1,
+            "learned_borrowing_from": 10,
+            "phono-semantic_matching_of": 1,
+            "semantic_loan_of": 4,
+            "unadapted_borrowing_from": 1,
+            "value": 3123
+        },
+        {
+            "source": 12,
+            "target": 19,
+            "borrowed_from": 65,
+            "cognate_of": 314,
+            "etymologically_related_to": 59,
+            "calque_of": 21,
+            "derived_from": 36,
+            "value": 495
+        },
+        {
+            "source": 12,
+            "target": 21,
+            "cognate_of": 60,
+            "derived_from": 11,
+            "etymologically_related_to": 13,
+            "borrowed_from": 12,
+            "value": 96
+        },
+        {
+            "source": 12,
+            "target": 27,
+            "borrowed_from": 69,
+            "cognate_of": 1691,
+            "etymologically_related_to": 104,
+            "calque_of": 8,
+            "compound_of": 6,
+            "derived_from": 349,
+            "has_affix": 3,
+            "value": 2230
+        },
+        {
+            "source": 12,
+            "target": 23,
+            "derived_from": 41,
+            "borrowed_from": 47,
+            "calque_of": 4,
+            "cognate_of": 3,
+            "etymologically_related_to": 11,
+            "value": 106
+        },
+        {
+            "source": 12,
+            "target": 31,
+            "borrowed_from": 8,
+            "cognate_of": 67,
+            "derived_from": 10,
+            "etymologically_related_to": 14,
+            "value": 99
+        },
+        {
+            "source": 12,
+            "target": 32,
+            "borrowed_from": 972,
+            "calque_of": 52,
+            "cognate_of": 97,
+            "derived_from": 214,
+            "etymologically_related_to": 77,
+            "value": 1412
+        },
+        {
+            "source": 12,
+            "target": 33,
+            "borrowed_from": 109,
+            "cognate_of": 26,
+            "derived_from": 66,
+            "etymologically_related_to": 21,
+            "calque_of": 3,
+            "compound_of": 2,
+            "value": 227
+        },
+        {
+            "source": 12,
+            "target": 34,
+            "borrowed_from": 708,
+            "cognate_of": 34,
+            "derived_from": 118,
+            "calque_of": 10,
+            "etymologically_related_to": 46,
+            "has_affix": 77,
+            "value": 993
+        },
+        {
+            "source": 12,
+            "target": 45,
+            "borrowed_from": 700,
+            "calque_of": 82,
+            "cognate_of": 172,
+            "derived_from": 162,
+            "etymologically_related_to": 90,
+            "compound_of": 4,
+            "has_affix": 4,
+            "learned_borrowing_from": 3,
+            "orthographic_borrowing_from": 1,
+            "semantic_loan_of": 2,
+            "value": 1220
+        },
+        {
+            "source": 12,
+            "target": 22,
+            "borrowed_from": 20,
+            "cognate_of": 11,
+            "etymologically_related_to": 11,
+            "derived_from": 45,
+            "value": 87
+        },
+        {
+            "source": 12,
+            "target": 36,
+            "borrowed_from": 39,
+            "cognate_of": 16,
+            "derived_from": 15,
+            "etymologically_related_to": 18,
+            "calque_of": 3,
+            "value": 91
+        },
+        {
+            "source": 12,
+            "target": 37,
+            "borrowed_from": 148,
+            "calque_of": 9,
+            "cognate_of": 79,
+            "derived_from": 65,
+            "etymologically_related_to": 32,
+            "compound_of": 2,
+            "value": 335
+        },
+        {
+            "source": 12,
+            "target": 38,
+            "borrowed_from": 140,
+            "calque_of": 79,
+            "cognate_of": 1387,
+            "derived_from": 250,
+            "etymologically_related_to": 295,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "value": 2153
+        },
+        {
+            "source": 12,
+            "target": 40,
+            "borrowed_from": 24,
+            "cognate_of": 8,
+            "derived_from": 12,
+            "etymologically_related_to": 6,
+            "value": 50
+        },
+        {
+            "source": 13,
+            "target": 17,
+            "borrowed_from": 3,
+            "cognate_of": 5,
+            "derived_from": 12,
+            "etymologically_related_to": 4,
+            "value": 24
+        },
+        {
+            "source": 13,
+            "target": 16,
+            "cognate_of": 4,
+            "derived_from": 1,
+            "value": 5
+        },
+        {
+            "source": 13,
+            "target": 6,
+            "cognate_of": 4,
+            "derived_from": 1,
+            "value": 5
+        },
+        {
+            "source": 13,
+            "target": 18,
+            "borrowed_from": 172,
+            "calque_of": 2,
+            "cognate_of": 32,
+            "derived_from": 150,
+            "etymologically_related_to": 55,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "learned_borrowing_from": 1,
+            "semantic_loan_of": 2,
+            "value": 416
+        },
+        {
+            "source": 13,
+            "target": 44,
+            "borrowed_from": 27,
+            "calque_of": 2,
+            "cognate_of": 33,
+            "derived_from": 200,
+            "etymologically_related_to": 71,
+            "has_affix": 2,
+            "learned_borrowing_from": 3,
+            "semantic_loan_of": 5,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 345
+        },
+        {
+            "source": 13,
+            "target": 19,
+            "cognate_of": 5,
+            "value": 5
+        },
+        {
+            "source": 13,
+            "target": 21,
+            "cognate_of": 6,
+            "etymologically_related_to": 4,
+            "derived_from": 1,
+            "value": 11
+        },
+        {
+            "source": 13,
+            "target": 23,
+            "borrowed_from": 18,
+            "cognate_of": 27,
+            "etymologically_related_to": 5,
+            "derived_from": 11,
+            "value": 61
+        },
+        {
+            "source": 13,
+            "target": 31,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 13,
+            "target": 32,
+            "cognate_of": 3,
+            "derived_from": 4,
+            "borrowed_from": 6,
+            "etymologically_related_to": 1,
+            "value": 14
+        },
+        {
+            "source": 13,
+            "target": 33,
+            "borrowed_from": 3,
+            "calque_of": 1,
+            "cognate_of": 6,
+            "derived_from": 8,
+            "etymologically_related_to": 5,
+            "value": 23
+        },
+        {
+            "source": 13,
+            "target": 34,
+            "borrowed_from": 585,
+            "cognate_of": 21,
+            "etymologically_related_to": 66,
+            "calque_of": 1,
+            "derived_from": 112,
+            "has_affix": 8,
+            "has_prefix_with_root": 3,
+            "has_suffix": 3,
+            "value": 799
+        },
+        {
+            "source": 13,
+            "target": 45,
+            "borrowed_from": 23,
+            "calque_of": 2,
+            "cognate_of": 13,
+            "derived_from": 15,
+            "etymologically_related_to": 19,
+            "value": 72
+        },
+        {
+            "source": 13,
+            "target": 37,
+            "borrowed_from": 16,
+            "calque_of": 1,
+            "cognate_of": 12,
+            "derived_from": 22,
+            "etymologically_related_to": 4,
+            "value": 55
+        },
+        {
+            "source": 13,
+            "target": 38,
+            "derived_from": 1,
+            "borrowed_from": 1,
+            "cognate_of": 2,
+            "etymologically_related_to": 2,
+            "value": 6
+        },
+        {
+            "source": 13,
+            "target": 40,
+            "borrowed_from": 50,
+            "calque_of": 2,
+            "cognate_of": 25,
+            "derived_from": 193,
+            "etymologically_related_to": 15,
+            "value": 285
+        },
+        {
+            "source": 17,
+            "target": 18,
+            "borrowed_from": 22,
+            "calque_of": 1,
+            "derived_from": 126,
+            "etymologically_related_to": 11,
+            "value": 160
+        },
+        {
+            "source": 17,
+            "target": 44,
+            "borrowed_from": 21,
+            "cognate_of": 29,
+            "derived_from": 145,
+            "etymologically_related_to": 38,
+            "has_affix": 6,
+            "calque_of": 1,
+            "compound_of": 2,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "semantic_loan_of": 1,
+            "value": 245
+        },
+        {
+            "source": 17,
+            "target": 21,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 17,
+            "target": 24,
+            "cognate_of": 27,
+            "derived_from": 14,
+            "etymologically_related_to": 2,
+            "value": 43
+        },
+        {
+            "source": 17,
+            "target": 32,
+            "borrowed_from": 27,
+            "cognate_of": 1,
+            "derived_from": 57,
+            "etymologically_related_to": 10,
+            "value": 95
+        },
+        {
+            "source": 17,
+            "target": 33,
+            "derived_from": 84,
+            "borrowed_from": 11,
+            "cognate_of": 3,
+            "etymologically_related_to": 5,
+            "value": 103
+        },
+        {
+            "source": 17,
+            "target": 45,
+            "borrowed_from": 59,
+            "calque_of": 2,
+            "cognate_of": 6,
+            "derived_from": 36,
+            "etymologically_related_to": 3,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 108
+        },
+        {
+            "source": 17,
+            "target": 37,
+            "borrowed_from": 20,
+            "cognate_of": 8,
+            "derived_from": 54,
+            "etymologically_related_to": 9,
+            "value": 91
+        },
+        {
+            "source": 17,
+            "target": 40,
+            "cognate_of": 5,
+            "derived_from": 12,
+            "etymologically_related_to": 2,
+            "borrowed_from": 1,
+            "value": 20
+        },
+        {
+            "source": 15,
+            "target": 20,
+            "cognate_of": 1,
+            "etymologically_related_to": 1,
+            "value": 2
+        },
+        {
+            "source": 15,
+            "target": 13,
+            "cognate_of": 2,
+            "derived_from": 6,
+            "value": 8
+        },
+        {
+            "source": 15,
+            "target": 17,
+            "borrowed_from": 5,
+            "derived_from": 41,
+            "value": 46
+        },
+        {
+            "source": 15,
+            "target": 16,
+            "etymologically_related_to": 4,
+            "value": 4
+        },
+        {
+            "source": 15,
+            "target": 18,
+            "borrowed_from": 46,
+            "calque_of": 1,
+            "cognate_of": 28,
+            "derived_from": 120,
+            "etymologically_related_to": 78,
+            "has_affix": 2,
+            "value": 275
+        },
+        {
+            "source": 15,
+            "target": 44,
+            "borrowed_from": 348,
+            "calque_of": 7,
+            "cognate_of": 24,
+            "derived_from": 1062,
+            "etymologically_related_to": 422,
+            "has_affix": 2,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "value": 1867
+        },
+        {
+            "source": 15,
+            "target": 19,
+            "cognate_of": 2,
+            "borrowed_from": 1,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "value": 6
+        },
+        {
+            "source": 15,
+            "target": 21,
+            "cognate_of": 3,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "borrowed_from": 2,
+            "value": 7
+        },
+        {
+            "source": 15,
+            "target": 23,
+            "cognate_of": 5,
+            "etymologically_related_to": 2,
+            "borrowed_from": 7,
+            "derived_from": 6,
+            "value": 20
+        },
+        {
+            "source": 15,
+            "target": 31,
+            "borrowed_from": 1,
+            "value": 1
+        },
+        {
+            "source": 15,
+            "target": 32,
+            "borrowed_from": 55,
+            "cognate_of": 30,
+            "etymologically_related_to": 18,
+            "derived_from": 4,
+            "value": 107
+        },
+        {
+            "source": 15,
+            "target": 33,
+            "cognate_of": 2,
+            "derived_from": 15,
+            "etymologically_related_to": 3,
+            "borrowed_from": 3,
+            "value": 23
+        },
+        {
+            "source": 15,
+            "target": 34,
+            "borrowed_from": 1262,
+            "cognate_of": 45,
+            "derived_from": 202,
+            "etymologically_related_to": 498,
+            "calque_of": 6,
+            "compound_of": 6,
+            "has_affix": 842,
+            "value": 2861
+        },
+        {
+            "source": 15,
+            "target": 45,
+            "borrowed_from": 13,
+            "cognate_of": 62,
+            "derived_from": 35,
+            "etymologically_related_to": 31,
+            "value": 141
+        },
+        {
+            "source": 15,
+            "target": 22,
+            "borrowed_from": 33,
+            "cognate_of": 68,
+            "derived_from": 26,
+            "etymologically_related_to": 22,
+            "value": 149
+        },
+        {
+            "source": 15,
+            "target": 36,
+            "borrowed_from": 13,
+            "cognate_of": 41,
+            "derived_from": 13,
+            "etymologically_related_to": 11,
+            "value": 78
+        },
+        {
+            "source": 15,
+            "target": 37,
+            "borrowed_from": 14,
+            "cognate_of": 3,
+            "derived_from": 15,
+            "etymologically_related_to": 3,
+            "value": 35
+        },
+        {
+            "source": 15,
+            "target": 38,
+            "borrowed_from": 2,
+            "cognate_of": 1,
+            "derived_from": 2,
+            "value": 5
+        },
+        {
+            "source": 15,
+            "target": 40,
+            "borrowed_from": 3,
+            "cognate_of": 90,
+            "derived_from": 8,
+            "etymologically_related_to": 32,
+            "has_affix": 2,
+            "value": 135
+        },
+        {
+            "source": 16,
+            "target": 4,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 16,
+            "target": 17,
+            "cognate_of": 2,
+            "derived_from": 12,
+            "etymologically_related_to": 1,
+            "value": 15
+        },
+        {
+            "source": 16,
+            "target": 6,
+            "borrowed_from": 1,
+            "cognate_of": 6,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "value": 10
+        },
+        {
+            "source": 16,
+            "target": 18,
+            "borrowed_from": 12,
+            "cognate_of": 7,
+            "derived_from": 29,
+            "etymologically_related_to": 14,
+            "value": 62
+        },
+        {
+            "source": 16,
+            "target": 44,
+            "borrowed_from": 22,
+            "calque_of": 3,
+            "cognate_of": 65,
+            "derived_from": 262,
+            "etymologically_related_to": 94,
+            "value": 446
+        },
+        {
+            "source": 16,
+            "target": 19,
+            "cognate_of": 18,
+            "borrowed_from": 1,
+            "derived_from": 2,
+            "etymologically_related_to": 4,
+            "value": 25
+        },
+        {
+            "source": 16,
+            "target": 21,
+            "cognate_of": 19,
+            "etymologically_related_to": 4,
+            "derived_from": 1,
+            "value": 24
+        },
+        {
+            "source": 16,
+            "target": 27,
+            "cognate_of": 410,
+            "etymologically_related_to": 1,
+            "value": 411
+        },
+        {
+            "source": 16,
+            "target": 31,
+            "borrowed_from": 3,
+            "cognate_of": 78,
+            "derived_from": 5,
+            "etymologically_related_to": 31,
+            "value": 117
+        },
+        {
+            "source": 16,
+            "target": 32,
+            "cognate_of": 3,
+            "borrowed_from": 3,
+            "value": 6
+        },
+        {
+            "source": 16,
+            "target": 33,
+            "borrowed_from": 3,
+            "cognate_of": 6,
+            "derived_from": 6,
+            "etymologically_related_to": 2,
+            "value": 17
+        },
+        {
+            "source": 16,
+            "target": 45,
+            "borrowed_from": 1,
+            "cognate_of": 11,
+            "derived_from": 7,
+            "etymologically_related_to": 7,
+            "value": 26
+        },
+        {
+            "source": 16,
+            "target": 22,
+            "cognate_of": 1,
+            "etymologically_related_to": 1,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 16,
+            "target": 37,
+            "cognate_of": 3,
+            "derived_from": 12,
+            "etymologically_related_to": 2,
+            "borrowed_from": 1,
+            "value": 18
+        },
+        {
+            "source": 16,
+            "target": 38,
+            "cognate_of": 641,
+            "derived_from": 4,
+            "etymologically_related_to": 129,
+            "borrowed_from": 4,
+            "has_affix": 2,
+            "value": 780
+        },
+        {
+            "source": 16,
+            "target": 40,
+            "cognate_of": 1,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 3
+        },
+        {
+            "source": 6,
+            "target": 20,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 6,
+            "target": 17,
+            "borrowed_from": 8,
+            "cognate_of": 2,
+            "derived_from": 21,
+            "etymologically_related_to": 8,
+            "value": 39
+        },
+        {
+            "source": 6,
+            "target": 15,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 6,
+            "target": 18,
+            "borrowed_from": 9,
+            "calque_of": 1,
+            "cognate_of": 14,
+            "derived_from": 26,
+            "etymologically_related_to": 14,
+            "value": 64
+        },
+        {
+            "source": 6,
+            "target": 44,
+            "borrowed_from": 103,
+            "calque_of": 12,
+            "cognate_of": 164,
+            "derived_from": 715,
+            "etymologically_related_to": 179,
+            "inherited_from": 1,
+            "value": 1174
+        },
+        {
+            "source": 6,
+            "target": 19,
+            "cognate_of": 10,
+            "derived_from": 1,
+            "etymologically_related_to": 3,
+            "value": 14
+        },
+        {
+            "source": 6,
+            "target": 21,
+            "cognate_of": 27,
+            "etymologically_related_to": 3,
+            "value": 30
+        },
+        {
+            "source": 6,
+            "target": 32,
+            "cognate_of": 5,
+            "derived_from": 2,
+            "borrowed_from": 1,
+            "value": 8
+        },
+        {
+            "source": 6,
+            "target": 33,
+            "borrowed_from": 4,
+            "cognate_of": 5,
+            "derived_from": 18,
+            "etymologically_related_to": 6,
+            "value": 33
+        },
+        {
+            "source": 6,
+            "target": 34,
+            "borrowed_from": 1,
+            "etymologically_related_to": 1,
+            "value": 2
+        },
+        {
+            "source": 6,
+            "target": 45,
+            "borrowed_from": 2,
+            "cognate_of": 14,
+            "derived_from": 8,
+            "etymologically_related_to": 1,
+            "value": 25
+        },
+        {
+            "source": 6,
+            "target": 37,
+            "borrowed_from": 14,
+            "cognate_of": 16,
+            "derived_from": 25,
+            "etymologically_related_to": 5,
+            "value": 60
+        },
+        {
+            "source": 6,
+            "target": 38,
+            "cognate_of": 9,
+            "derived_from": 2,
+            "value": 11
+        },
+        {
+            "source": 6,
+            "target": 40,
+            "cognate_of": 3,
+            "derived_from": 2,
+            "value": 5
+        },
+        {
+            "source": 18,
+            "target": 44,
+            "borrowed_from": 1822,
+            "calque_of": 5,
+            "cognate_of": 80,
+            "compound_of": 21,
+            "derived_from": 7312,
+            "etymologically_related_to": 5004,
+            "has_affix": 63,
+            "has_prefix": 17,
+            "has_prefix_with_root": 29,
+            "has_suffix": 12,
+            "inherited_from": 3236,
+            "learned_borrowing_from": 143,
+            "semi_learned_borrowing_from": 23,
+            "unadapted_borrowing_from": 12,
+            "value": 17779
+        },
+        {
+            "source": 18,
+            "target": 19,
+            "cognate_of": 19,
+            "borrowed_from": 6,
+            "derived_from": 9,
+            "etymologically_related_to": 11,
+            "value": 45
+        },
+        {
+            "source": 18,
+            "target": 21,
+            "cognate_of": 5,
+            "derived_from": 7,
+            "borrowed_from": 3,
+            "etymologically_related_to": 3,
+            "value": 18
+        },
+        {
+            "source": 18,
+            "target": 27,
+            "cognate_of": 5,
+            "borrowed_from": 1,
+            "derived_from": 14,
+            "etymologically_related_to": 1,
+            "value": 21
+        },
+        {
+            "source": 18,
+            "target": 24,
+            "cognate_of": 37,
+            "etymologically_related_to": 18,
+            "borrowed_from": 620,
+            "calque_of": 4,
+            "derived_from": 82,
+            "value": 761
+        },
+        {
+            "source": 18,
+            "target": 31,
+            "cognate_of": 3,
+            "derived_from": 4,
+            "value": 7
+        },
+        {
+            "source": 18,
+            "target": 32,
+            "borrowed_from": 221,
+            "cognate_of": 3,
+            "derived_from": 178,
+            "etymologically_related_to": 27,
+            "value": 429
+        },
+        {
+            "source": 18,
+            "target": 33,
+            "borrowed_from": 306,
+            "calque_of": 4,
+            "cognate_of": 846,
+            "derived_from": 158,
+            "etymologically_related_to": 121,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "initialism_of": 1,
+            "doublet_with": 1,
+            "has_affix": 8,
+            "value": 1447
+        },
+        {
+            "source": 18,
+            "target": 34,
+            "borrowed_from": 600,
+            "cognate_of": 611,
+            "derived_from": 116,
+            "etymologically_related_to": 167,
+            "calque_of": 1,
+            "value": 1495
+        },
+        {
+            "source": 18,
+            "target": 45,
+            "borrowed_from": 180,
+            "calque_of": 2,
+            "cognate_of": 27,
+            "derived_from": 70,
+            "etymologically_related_to": 24,
+            "value": 303
+        },
+        {
+            "source": 18,
+            "target": 22,
+            "cognate_of": 2,
+            "borrowed_from": 6,
+            "derived_from": 15,
+            "etymologically_related_to": 5,
+            "value": 28
+        },
+        {
+            "source": 18,
+            "target": 36,
+            "cognate_of": 5,
+            "derived_from": 6,
+            "borrowed_from": 20,
+            "etymologically_related_to": 2,
+            "value": 33
+        },
+        {
+            "source": 18,
+            "target": 37,
+            "borrowed_from": 556,
+            "calque_of": 9,
+            "cognate_of": 1159,
+            "derived_from": 120,
+            "etymologically_related_to": 156,
+            "semi_learned_borrowing_from": 1,
+            "unadapted_borrowing_from": 10,
+            "compound_of": 2,
+            "has_affix": 5,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 2020
+        },
+        {
+            "source": 18,
+            "target": 38,
+            "borrowed_from": 24,
+            "calque_of": 1,
+            "cognate_of": 20,
+            "derived_from": 46,
+            "etymologically_related_to": 16,
+            "value": 107
+        },
+        {
+            "source": 18,
+            "target": 40,
+            "borrowed_from": 50,
+            "cognate_of": 14,
+            "derived_from": 113,
+            "etymologically_related_to": 13,
+            "value": 190
+        },
+        {
+            "source": 44,
+            "target": 19,
+            "cognate_of": 284,
+            "etymologically_related_to": 263,
+            "borrowed_from": 143,
+            "calque_of": 1,
+            "derived_from": 245,
+            "has_affix": 2,
+            "has_prefix": 2,
+            "has_prefix_with_root": 1,
+            "learned_borrowing_from": 1,
+            "value": 942
+        },
+        {
+            "source": 44,
+            "target": 21,
+            "cognate_of": 346,
+            "etymologically_related_to": 74,
+            "borrowed_from": 23,
+            "calque_of": 1,
+            "derived_from": 56,
+            "value": 500
+        },
+        {
+            "source": 44,
+            "target": 31,
+            "cognate_of": 9,
+            "etymologically_related_to": 12,
+            "borrowed_from": 6,
+            "derived_from": 36,
+            "value": 63
+        },
+        {
+            "source": 44,
+            "target": 32,
+            "borrowed_from": 1147,
+            "cognate_of": 49,
+            "derived_from": 1119,
+            "etymologically_related_to": 228,
+            "calque_of": 20,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "inherited_from": 1,
+            "learned_borrowing_from": 1,
+            "semantic_loan_of": 2,
+            "value": 2569
+        },
+        {
+            "source": 44,
+            "target": 33,
+            "cognate_of": 37,
+            "derived_from": 4914,
+            "etymologically_related_to": 3558,
+            "has_suffix": 5,
+            "learned_borrowing_from": 73,
+            "borrowed_from": 1782,
+            "calque_of": 1,
+            "compound_of": 18,
+            "has_affix": 40,
+            "has_prefix": 1,
+            "has_prefix_with_root": 5,
+            "inherited_from": 2115,
+            "semi_learned_borrowing_from": 12,
+            "value": 12561
+        },
+        {
+            "source": 44,
+            "target": 34,
+            "cognate_of": 40,
+            "borrowed_from": 1377,
+            "calque_of": 2,
+            "derived_from": 1933,
+            "etymologically_related_to": 2180,
+            "has_affix": 3,
+            "has_prefix": 1,
+            "has_prefix_with_root": 3,
+            "has_suffix": 2,
+            "inherited_from": 2206,
+            "learned_borrowing_from": 7,
+            "semi_learned_borrowing_from": 1,
+            "value": 7755
+        },
+        {
+            "source": 44,
+            "target": 45,
+            "borrowed_from": 322,
+            "cognate_of": 205,
+            "derived_from": 356,
+            "etymologically_related_to": 170,
+            "calque_of": 47,
+            "has_affix": 2,
+            "learned_borrowing_from": 1,
+            "semantic_loan_of": 1,
+            "value": 1104
+        },
+        {
+            "source": 44,
+            "target": 36,
+            "cognate_of": 7,
+            "borrowed_from": 4,
+            "derived_from": 51,
+            "etymologically_related_to": 6,
+            "learned_borrowing_from": 2,
+            "value": 70
+        },
+        {
+            "source": 44,
+            "target": 37,
+            "borrowed_from": 3025,
+            "calque_of": 8,
+            "cognate_of": 79,
+            "derived_from": 4362,
+            "etymologically_related_to": 4060,
+            "compound_of": 8,
+            "doublet_with": 3,
+            "has_affix": 59,
+            "has_prefix": 3,
+            "has_prefix_with_root": 10,
+            "has_suffix": 8,
+            "inherited_from": 2632,
+            "learned_borrowing_from": 43,
+            "semi_learned_borrowing_from": 110,
+            "value": 14410
+        },
+        {
+            "source": 44,
+            "target": 38,
+            "cognate_of": 66,
+            "derived_from": 545,
+            "etymologically_related_to": 186,
+            "has_affix": 2,
+            "borrowed_from": 109,
+            "calque_of": 4,
+            "has_prefix": 1,
+            "has_prefix_with_root": 1,
+            "learned_borrowing_from": 2,
+            "value": 916
+        },
+        {
+            "source": 44,
+            "target": 40,
+            "cognate_of": 7,
+            "etymologically_related_to": 19,
+            "borrowed_from": 11,
+            "calque_of": 1,
+            "derived_from": 122,
+            "learned_borrowing_from": 1,
+            "value": 161
+        },
+        {
+            "source": 19,
+            "target": 2,
+            "cognate_of": 5,
+            "etymologically_related_to": 1,
+            "value": 6
+        },
+        {
+            "source": 19,
+            "target": 0,
+            "borrowed_from": 1,
+            "value": 1
+        },
+        {
+            "source": 19,
+            "target": 20,
+            "borrowed_from": 1,
+            "cognate_of": 79,
+            "derived_from": 1,
+            "etymologically_related_to": 10,
+            "value": 91
+        },
+        {
+            "source": 19,
+            "target": 17,
+            "borrowed_from": 1,
+            "derived_from": 9,
+            "etymologically_related_to": 1,
+            "value": 11
+        },
+        {
+            "source": 19,
+            "target": 21,
+            "borrowed_from": 8,
+            "cognate_of": 1191,
+            "derived_from": 12,
+            "etymologically_related_to": 358,
+            "calque_of": 1,
+            "value": 1570
+        },
+        {
+            "source": 19,
+            "target": 31,
+            "borrowed_from": 2,
+            "cognate_of": 7,
+            "derived_from": 3,
+            "etymologically_related_to": 1,
+            "value": 13
+        },
+        {
+            "source": 19,
+            "target": 32,
+            "borrowed_from": 9,
+            "cognate_of": 206,
+            "derived_from": 3,
+            "etymologically_related_to": 21,
+            "value": 239
+        },
+        {
+            "source": 19,
+            "target": 33,
+            "cognate_of": 11,
+            "derived_from": 4,
+            "borrowed_from": 1,
+            "value": 16
+        },
+        {
+            "source": 19,
+            "target": 34,
+            "borrowed_from": 2,
+            "cognate_of": 8,
+            "etymologically_related_to": 2,
+            "value": 12
+        },
+        {
+            "source": 19,
+            "target": 45,
+            "borrowed_from": 85,
+            "cognate_of": 392,
+            "derived_from": 15,
+            "etymologically_related_to": 149,
+            "value": 641
+        },
+        {
+            "source": 19,
+            "target": 22,
+            "borrowed_from": 1,
+            "cognate_of": 7,
+            "value": 8
+        },
+        {
+            "source": 19,
+            "target": 36,
+            "borrowed_from": 1,
+            "cognate_of": 5,
+            "value": 6
+        },
+        {
+            "source": 19,
+            "target": 37,
+            "borrowed_from": 5,
+            "cognate_of": 17,
+            "derived_from": 8,
+            "etymologically_related_to": 3,
+            "value": 33
+        },
+        {
+            "source": 19,
+            "target": 38,
+            "borrowed_from": 2,
+            "cognate_of": 39,
+            "derived_from": 10,
+            "etymologically_related_to": 6,
+            "value": 57
+        },
+        {
+            "source": 19,
+            "target": 40,
+            "borrowed_from": 1,
+            "cognate_of": 2,
+            "derived_from": 4,
+            "etymologically_related_to": 2,
+            "value": 9
+        },
+        {
+            "source": 21,
+            "target": 32,
+            "borrowed_from": 23,
+            "cognate_of": 152,
+            "derived_from": 11,
+            "etymologically_related_to": 25,
+            "value": 211
+        },
+        {
+            "source": 21,
+            "target": 33,
+            "derived_from": 3,
+            "borrowed_from": 1,
+            "etymologically_related_to": 2,
+            "value": 6
+        },
+        {
+            "source": 21,
+            "target": 34,
+            "cognate_of": 5,
+            "etymologically_related_to": 1,
+            "value": 6
+        },
+        {
+            "source": 21,
+            "target": 45,
+            "borrowed_from": 29,
+            "calque_of": 2,
+            "cognate_of": 248,
+            "derived_from": 19,
+            "etymologically_related_to": 75,
+            "value": 373
+        },
+        {
+            "source": 21,
+            "target": 36,
+            "cognate_of": 14,
+            "value": 14
+        },
+        {
+            "source": 21,
+            "target": 37,
+            "borrowed_from": 2,
+            "cognate_of": 1,
+            "etymologically_related_to": 3,
+            "value": 6
+        },
+        {
+            "source": 21,
+            "target": 38,
+            "cognate_of": 11,
+            "derived_from": 2,
+            "etymologically_related_to": 2,
+            "value": 15
+        },
+        {
+            "source": 21,
+            "target": 40,
+            "cognate_of": 2,
+            "etymologically_related_to": 2,
+            "value": 4
+        },
+        {
+            "source": 27,
+            "target": 8,
+            "cognate_of": 1,
+            "derived_from": 1,
+            "value": 2
+        },
+        {
+            "source": 27,
+            "target": 5,
+            "cognate_of": 71,
+            "value": 71
+        },
+        {
+            "source": 27,
+            "target": 26,
+            "cognate_of": 3,
+            "value": 3
+        },
+        {
+            "source": 27,
+            "target": 13,
+            "etymologically_related_to": 1,
+            "value": 1
+        },
+        {
+            "source": 27,
+            "target": 15,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 27,
+            "target": 44,
+            "borrowed_from": 4,
+            "cognate_of": 5,
+            "derived_from": 233,
+            "etymologically_related_to": 14,
+            "value": 256
+        },
+        {
+            "source": 27,
+            "target": 21,
+            "cognate_of": 1,
+            "etymologically_related_to": 1,
+            "value": 2
+        },
+        {
+            "source": 27,
+            "target": 31,
+            "cognate_of": 2,
+            "value": 2
+        },
+        {
+            "source": 27,
+            "target": 33,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 27,
+            "target": 45,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 27,
+            "target": 37,
+            "cognate_of": 2,
+            "value": 2
+        },
+        {
+            "source": 27,
+            "target": 38,
+            "cognate_of": 106,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 108
+        },
+        {
+            "source": 23,
+            "target": 2,
+            "cognate_of": 2,
+            "derived_from": 1,
+            "value": 3
+        },
+        {
+            "source": 23,
+            "target": 30,
+            "cognate_of": 2,
+            "derived_from": 3,
+            "value": 5
+        },
+        {
+            "source": 23,
+            "target": 17,
+            "borrowed_from": 1,
+            "derived_from": 1,
+            "value": 2
+        },
+        {
+            "source": 23,
+            "target": 6,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 23,
+            "target": 18,
+            "borrowed_from": 10,
+            "cognate_of": 5,
+            "derived_from": 24,
+            "etymologically_related_to": 2,
+            "value": 41
+        },
+        {
+            "source": 23,
+            "target": 44,
+            "borrowed_from": 20,
+            "calque_of": 2,
+            "cognate_of": 7,
+            "derived_from": 79,
+            "etymologically_related_to": 16,
+            "value": 124
+        },
+        {
+            "source": 23,
+            "target": 19,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 23,
+            "target": 21,
+            "cognate_of": 3,
+            "value": 3
+        },
+        {
+            "source": 23,
+            "target": 32,
+            "cognate_of": 25,
+            "derived_from": 2,
+            "borrowed_from": 1,
+            "value": 28
+        },
+        {
+            "source": 23,
+            "target": 33,
+            "cognate_of": 3,
+            "borrowed_from": 1,
+            "value": 4
+        },
+        {
+            "source": 23,
+            "target": 34,
+            "borrowed_from": 2,
+            "cognate_of": 39,
+            "derived_from": 1,
+            "etymologically_related_to": 3,
+            "value": 45
+        },
+        {
+            "source": 23,
+            "target": 45,
+            "borrowed_from": 3,
+            "calque_of": 1,
+            "cognate_of": 68,
+            "derived_from": 6,
+            "etymologically_related_to": 7,
+            "value": 85
+        },
+        {
+            "source": 23,
+            "target": 22,
+            "cognate_of": 11,
+            "value": 11
+        },
+        {
+            "source": 23,
+            "target": 36,
+            "cognate_of": 16,
+            "etymologically_related_to": 2,
+            "value": 18
+        },
+        {
+            "source": 23,
+            "target": 37,
+            "borrowed_from": 1,
+            "cognate_of": 3,
+            "derived_from": 5,
+            "etymologically_related_to": 3,
+            "value": 12
+        },
+        {
+            "source": 23,
+            "target": 38,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 23,
+            "target": 40,
+            "borrowed_from": 6,
+            "cognate_of": 163,
+            "derived_from": 3,
+            "etymologically_related_to": 8,
+            "value": 180
+        },
+        {
+            "source": 24,
+            "target": 1,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 24,
+            "target": 9,
+            "borrowed_from": 1,
+            "value": 1
+        },
+        {
+            "source": 24,
+            "target": 12,
+            "cognate_of": 3,
+            "etymologically_related_to": 6,
+            "value": 9
+        },
+        {
+            "source": 24,
+            "target": 13,
+            "cognate_of": 1,
+            "etymologically_related_to": 1,
+            "value": 2
+        },
+        {
+            "source": 24,
+            "target": 44,
+            "borrowed_from": 4,
+            "calque_of": 4,
+            "cognate_of": 1,
+            "derived_from": 374,
+            "etymologically_related_to": 30,
+            "value": 413
+        },
+        {
+            "source": 24,
+            "target": 33,
+            "cognate_of": 13,
+            "derived_from": 1,
+            "borrowed_from": 1,
+            "etymologically_related_to": 1,
+            "value": 16
+        },
+        {
+            "source": 24,
+            "target": 37,
+            "cognate_of": 10,
+            "derived_from": 3,
+            "etymologically_related_to": 1,
+            "value": 14
+        },
+        {
+            "source": 24,
+            "target": 40,
+            "cognate_of": 3,
+            "value": 3
+        },
+        {
+            "source": 31,
+            "target": 17,
+            "derived_from": 8,
+            "etymologically_related_to": 1,
+            "value": 9
+        },
+        {
+            "source": 31,
+            "target": 45,
+            "borrowed_from": 3,
+            "derived_from": 3,
+            "etymologically_related_to": 5,
+            "cognate_of": 7,
+            "value": 18
+        },
+        {
+            "source": 31,
+            "target": 37,
+            "derived_from": 7,
+            "borrowed_from": 3,
+            "cognate_of": 3,
+            "value": 13
+        },
+        {
+            "source": 31,
+            "target": 38,
+            "borrowed_from": 4,
+            "cognate_of": 206,
+            "derived_from": 6,
+            "etymologically_related_to": 27,
+            "value": 243
+        },
+        {
+            "source": 32,
+            "target": 26,
+            "cognate_of": 1,
+            "derived_from": 2,
+            "value": 3
+        },
+        {
+            "source": 32,
+            "target": 24,
+            "borrowed_from": 1,
+            "value": 1
+        },
+        {
+            "source": 32,
+            "target": 31,
+            "borrowed_from": 5,
+            "derived_from": 1,
+            "value": 6
+        },
+        {
+            "source": 32,
+            "target": 33,
+            "borrowed_from": 61,
+            "cognate_of": 2,
+            "derived_from": 23,
+            "etymologically_related_to": 3,
+            "unadapted_borrowing_from": 1,
+            "value": 90
+        },
+        {
+            "source": 32,
+            "target": 34,
+            "borrowed_from": 88,
+            "cognate_of": 64,
+            "derived_from": 18,
+            "etymologically_related_to": 17,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 189
+        },
+        {
+            "source": 32,
+            "target": 45,
+            "borrowed_from": 475,
+            "calque_of": 13,
+            "cognate_of": 429,
+            "derived_from": 64,
+            "etymologically_related_to": 130,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "phono-semantic_matching_of": 1,
+            "value": 1114
+        },
+        {
+            "source": 32,
+            "target": 22,
+            "borrowed_from": 15,
+            "cognate_of": 165,
+            "derived_from": 6,
+            "etymologically_related_to": 8,
+            "value": 194
+        },
+        {
+            "source": 32,
+            "target": 36,
+            "borrowed_from": 1,
+            "cognate_of": 34,
+            "etymologically_related_to": 2,
+            "value": 37
+        },
+        {
+            "source": 32,
+            "target": 37,
+            "borrowed_from": 94,
+            "cognate_of": 4,
+            "derived_from": 58,
+            "etymologically_related_to": 16,
+            "value": 172
+        },
+        {
+            "source": 32,
+            "target": 38,
+            "borrowed_from": 11,
+            "cognate_of": 8,
+            "derived_from": 4,
+            "calque_of": 1,
+            "etymologically_related_to": 1,
+            "unadapted_borrowing_from": 1,
+            "value": 26
+        },
+        {
+            "source": 32,
+            "target": 40,
+            "borrowed_from": 9,
+            "cognate_of": 16,
+            "derived_from": 16,
+            "etymologically_related_to": 5,
+            "value": 46
+        },
+        {
+            "source": 33,
+            "target": 20,
+            "borrowed_from": 1,
+            "cognate_of": 1,
+            "value": 2
+        },
+        {
+            "source": 33,
+            "target": 31,
+            "borrowed_from": 5,
+            "cognate_of": 1,
+            "derived_from": 2,
+            "value": 8
+        },
+        {
+            "source": 33,
+            "target": 34,
+            "borrowed_from": 28,
+            "cognate_of": 237,
+            "derived_from": 11,
+            "etymologically_related_to": 52,
+            "value": 328
+        },
+        {
+            "source": 33,
+            "target": 45,
+            "borrowed_from": 84,
+            "calque_of": 1,
+            "cognate_of": 5,
+            "derived_from": 46,
+            "etymologically_related_to": 6,
+            "value": 142
+        },
+        {
+            "source": 33,
+            "target": 22,
+            "cognate_of": 2,
+            "derived_from": 7,
+            "etymologically_related_to": 1,
+            "borrowed_from": 1,
+            "calque_of": 1,
+            "value": 12
+        },
+        {
+            "source": 33,
+            "target": 36,
+            "cognate_of": 2,
+            "derived_from": 2,
+            "value": 4
+        },
+        {
+            "source": 33,
+            "target": 37,
+            "borrowed_from": 506,
+            "calque_of": 1,
+            "cognate_of": 2120,
+            "derived_from": 69,
+            "doublet_with": 2,
+            "etymologically_related_to": 186,
+            "has_affix": 20,
+            "has_confix": 2,
+            "has_prefix": 3,
+            "has_prefix_with_root": 4,
+            "has_suffix": 2,
+            "value": 2915
+        },
+        {
+            "source": 33,
+            "target": 38,
+            "borrowed_from": 14,
+            "cognate_of": 5,
+            "derived_from": 10,
+            "etymologically_related_to": 7,
+            "value": 36
+        },
+        {
+            "source": 33,
+            "target": 40,
+            "borrowed_from": 6,
+            "cognate_of": 7,
+            "derived_from": 12,
+            "etymologically_related_to": 1,
+            "value": 26
+        },
+        {
+            "source": 34,
+            "target": 11,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 34,
+            "target": 17,
+            "borrowed_from": 4,
+            "derived_from": 21,
+            "etymologically_related_to": 5,
+            "value": 30
+        },
+        {
+            "source": 34,
+            "target": 16,
+            "borrowed_from": 1,
+            "etymologically_related_to": 1,
+            "value": 2
+        },
+        {
+            "source": 34,
+            "target": 24,
+            "cognate_of": 1,
+            "value": 1
+        },
+        {
+            "source": 34,
+            "target": 31,
+            "cognate_of": 1,
+            "etymologically_related_to": 2,
+            "value": 3
+        },
+        {
+            "source": 34,
+            "target": 45,
+            "borrowed_from": 365,
+            "calque_of": 3,
+            "cognate_of": 130,
+            "derived_from": 24,
+            "etymologically_related_to": 81,
+            "has_affix": 204,
+            "has_prefix": 1,
+            "has_prefix_with_root": 2,
+            "has_suffix": 1,
+            "value": 811
+        },
+        {
+            "source": 34,
+            "target": 22,
+            "cognate_of": 22,
+            "etymologically_related_to": 1,
+            "borrowed_from": 2,
+            "derived_from": 7,
+            "value": 32
+        },
+        {
+            "source": 34,
+            "target": 36,
+            "cognate_of": 16,
+            "derived_from": 2,
+            "etymologically_related_to": 3,
+            "value": 21
+        },
+        {
+            "source": 34,
+            "target": 37,
+            "borrowed_from": 22,
+            "cognate_of": 387,
+            "derived_from": 21,
+            "etymologically_related_to": 99,
+            "value": 529
+        },
+        {
+            "source": 34,
+            "target": 38,
+            "cognate_of": 4,
+            "derived_from": 2,
+            "value": 6
+        },
+        {
+            "source": 34,
+            "target": 40,
+            "borrowed_from": 372,
+            "calque_of": 3,
+            "cognate_of": 37,
+            "derived_from": 40,
+            "etymologically_related_to": 80,
+            "has_affix": 269,
+            "value": 801
+        },
+        {
+            "source": 45,
+            "target": 22,
+            "cognate_of": 139,
+            "etymologically_related_to": 24,
+            "borrowed_from": 17,
+            "calque_of": 1,
+            "derived_from": 11,
+            "value": 192
+        },
+        {
+            "source": 45,
+            "target": 36,
+            "cognate_of": 114,
+            "etymologically_related_to": 33,
+            "borrowed_from": 7,
+            "derived_from": 1,
+            "value": 155
+        },
+        {
+            "source": 45,
+            "target": 37,
+            "borrowed_from": 63,
+            "cognate_of": 12,
+            "derived_from": 22,
+            "etymologically_related_to": 12,
+            "value": 109
+        },
+        {
+            "source": 45,
+            "target": 38,
+            "borrowed_from": 19,
+            "cognate_of": 19,
+            "derived_from": 18,
+            "etymologically_related_to": 7,
+            "calque_of": 1,
+            "value": 64
+        },
+        {
+            "source": 45,
+            "target": 40,
+            "borrowed_from": 32,
+            "cognate_of": 84,
+            "derived_from": 16,
+            "etymologically_related_to": 21,
+            "value": 153
+        },
+        {
+            "source": 22,
+            "target": 2,
+            "derived_from": 1,
+            "etymologically_related_to": 1,
+            "value": 2
+        },
+        {
+            "source": 22,
+            "target": 5,
+            "borrowed_from": 1,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "value": 4
+        },
+        {
+            "source": 22,
+            "target": 13,
+            "etymologically_related_to": 2,
+            "value": 2
+        },
+        {
+            "source": 22,
+            "target": 17,
+            "derived_from": 17,
+            "etymologically_related_to": 1,
+            "value": 18
+        },
+        {
+            "source": 22,
+            "target": 6,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 22,
+            "target": 44,
+            "borrowed_from": 15,
+            "calque_of": 1,
+            "cognate_of": 9,
+            "derived_from": 148,
+            "etymologically_related_to": 26,
+            "learned_borrowing_from": 1,
+            "value": 200
+        },
+        {
+            "source": 22,
+            "target": 21,
+            "cognate_of": 5,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "value": 8
+        },
+        {
+            "source": 22,
+            "target": 31,
+            "derived_from": 1,
+            "etymologically_related_to": 2,
+            "value": 3
+        },
+        {
+            "source": 22,
+            "target": 36,
+            "borrowed_from": 1,
+            "cognate_of": 41,
+            "etymologically_related_to": 6,
+            "derived_from": 1,
+            "value": 49
+        },
+        {
+            "source": 22,
+            "target": 37,
+            "borrowed_from": 4,
+            "cognate_of": 1,
+            "derived_from": 14,
+            "value": 19
+        },
+        {
+            "source": 22,
+            "target": 38,
+            "derived_from": 11,
+            "etymologically_related_to": 4,
+            "cognate_of": 2,
+            "value": 17
+        },
+        {
+            "source": 22,
+            "target": 40,
+            "borrowed_from": 1,
+            "cognate_of": 3,
+            "derived_from": 4,
+            "value": 8
+        },
+        {
+            "source": 36,
+            "target": 30,
+            "cognate_of": 1,
+            "derived_from": 1,
+            "value": 2
+        },
+        {
+            "source": 36,
+            "target": 13,
+            "borrowed_from": 1,
+            "derived_from": 3,
+            "value": 4
+        },
+        {
+            "source": 36,
+            "target": 17,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 36,
+            "target": 37,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "cognate_of": 2,
+            "value": 5
+        },
+        {
+            "source": 36,
+            "target": 40,
+            "borrowed_from": 1,
+            "cognate_of": 2,
+            "derived_from": 2,
+            "etymologically_related_to": 1,
+            "value": 6
+        },
+        {
+            "source": 37,
+            "target": 20,
+            "derived_from": 1,
+            "value": 1
+        },
+        {
+            "source": 37,
+            "target": 38,
+            "borrowed_from": 10,
+            "cognate_of": 18,
+            "derived_from": 25,
+            "calque_of": 2,
+            "etymologically_related_to": 1,
+            "value": 56
+        },
+        {
+            "source": 37,
+            "target": 40,
+            "borrowed_from": 16,
+            "cognate_of": 7,
+            "derived_from": 24,
+            "etymologically_related_to": 1,
+            "value": 48
+        },
+        {
+            "source": 38,
+            "target": 2,
+            "derived_from": 2,
+            "value": 2
+        },
+        {
+            "source": 38,
+            "target": 20,
+            "calque_of": 1,
+            "value": 1
+        },
+        {
+            "source": 38,
+            "target": 17,
+            "borrowed_from": 4,
+            "derived_from": 16,
+            "etymologically_related_to": 4,
+            "value": 24
+        },
+        {
+            "source": 38,
+            "target": 36,
+            "derived_from": 2,
+            "value": 2
+        },
+        {
+            "source": 38,
+            "target": 40,
+            "borrowed_from": 2,
+            "cognate_of": 3,
+            "derived_from": 5,
+            "etymologically_related_to": 1,
+            "has_prefix_with_root": 1,
+            "has_suffix": 1,
+            "value": 13
+        }
+    ]
+}

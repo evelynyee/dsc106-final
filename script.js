@@ -2,10 +2,10 @@
 // TODO: more interaction for plot2? (e.g. filter links by value (count) or by relationship types)
 
 function load(){
-    let ety= "../data/english.csv"; // filtered etymoloy data to only engish terms
+    let ety= "data/english.csv"; // filtered etymoloy data to only engish terms
     // let countries="../data/List_of_official_languages_by_country_and_territory_1.csv"
-    let map="../data/europe.geojson"
-    let net="../data/lang_links.json" // I created this node-link dataset from the full etymology csv (all languages) using python (pandas)
+    let map="data/europe.geojson"
+    let net="data/lang_links.json" // I created this node-link dataset from the full etymology csv (all languages) using python (pandas)
     process(ety, map, net);
 }
 
