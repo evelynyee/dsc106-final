@@ -26,7 +26,7 @@ function process(ety, map, net) {
         render_plot1(ety.filter(d=> d.lang=='english'));
 
         words = extract_words(ety);
-        render_plot3(words, document.getElementById("term_input").value);
+        render_plot3(words, document.getElementById("term_input").value.toLowerCase());
     });
 
     d3.json(map).then((map) => {
@@ -370,9 +370,10 @@ function plot2(net, euromap) {
         .attr('class', d => "mappath "+d.properties.FIPS)
         .attr("d", pathgeo1)
         .attr('vector-effect',"non-scaling-stroke")
-        .html(function() {
-            area = this.getBBox();
-            return [area.x+(area.width/2),area.y+(area.height/2)];})
+        .html(function(d) {
+            return pathgeo1.centroid(d);})
+            // area = this.getBBox();
+            // return [area.x+(area.width/2),area.y+(area.height/2)];})
         .style("fill", map_fill) //d => colorScale(rolled[stateSym[d.properties.name]]))
         .style('stroke', border_color)
         .style('stroke-width', border_width);
@@ -383,10 +384,12 @@ function plot2(net, euromap) {
         //document.getElementsByClassName(country)[0].getBoundingClientRect();
         let x = parseFloat(area.html().split(',')[0]);
         let y = parseFloat(area.html().split(',')[1]);
-        if (country == 'NO'){return [x - 60, y+60];} // manual tweaks for a couple of countries to move the node closer to the middle
+        if (country == 'NO'){return [x - 40, y+60];} // manual tweaks for a couple of countries to move the node closer to the middle
         else if (country == 'IT') {return [x - 10, y-20];}
-        else if (country == 'DA') {return [x - 15, y-10];}
+        else if (country == 'DA') {return [x - 5, y];}
+        else if (country == 'HR') {return [x, y-5];}
         else {return [x,y];}
+        return [x,y];
     }
     // add links
     let link = svg.selectAll("line")
@@ -444,8 +447,9 @@ function plot2(net, euromap) {
 
     // zoom
     let zoom = d3.zoom()
+        // .extent([[0,0],[svgwidth,svgheight]])
         .scaleExtent([min_zoom, max_zoom])
-        // .translateExtent([[-475,-400],[450,350]])
+        .translateExtent([[-400,-350],[svgwidth+450,svgheight+375]])
         .on('zoom', function(event) {
             node.attr('transform', event.transform);
             link.attr('transform', event.transform);
@@ -589,8 +593,8 @@ function render_plot3(data, term='word', exclude_langs=[]) {
         .style('font-size', label_size)
     d3.select('#termBtn')
         .on('click', () => { // term search button
-        console.log('new plot 3 search term:', document.getElementById("term_input").value);
-        render_plot3(data, document.getElementById("term_input").value); // when clicked, re-render chart
+        console.log('new plot 3 search term:', document.getElementById("term_input").value.toLowerCase());
+        render_plot3(data, document.getElementById("term_input").value.toLowerCase()); // when clicked, re-render chart
     }); 
 
     // data processing - select target term and make node-link data
