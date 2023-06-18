@@ -13,10 +13,14 @@ ul {
 fieldset {
     display: inline-block;
 }
-footer {
+/* footer {
     background-color: rgb(217, 237, 255);
     display:flex;
     justify-content: center;
+} */
+footer {
+    text-align: center;
+    background-color: rgb(217, 237, 255);
 }
 .intro, .conclusion {
   width:80%;
